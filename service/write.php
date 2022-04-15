@@ -30,7 +30,7 @@ if(version_compare(PHP_VERSION, '8.0.0', '<') and get_magic_quotes_gpc()){
 $session = json_decode($sessionParam);
 
 
-$filepathPrefix = "../results/".sanitize($string = $session->testId, $is_filename =FALSE)."/";
+$filepathPrefix = "";
 $filepathPostfix = ".csv";
 
 if (!is_dir($filepathPrefix)) {
@@ -136,6 +136,10 @@ if ($write_pc) {
 	}
 	fclose($fp);
 }
+
+
+//$command = escapeshellcmd('/home/leonardo/Documentos/Git Repositories/leonardoboulitreau.github.io/service/PUSHTOGIT.py');
+//$output = shell_exec($command);
 
 // bs1116
 
@@ -482,5 +486,5 @@ if ($write_spatial_lev) {
 
 }
 
-
+// $comando = exec("/usr/bin/python3 PUSHTOGIT.py");
 ?>

@@ -1,77 +1,944 @@
-testname: webMUSHRA Example
-testId: default_example
+# test config mushra page, waveform, 11 conditions, no looping
+
+testname: UNICAMP Multimodal Artificial Intelligence Group
+testId: unicamp_affective_computing
 bufferSize: 2048
-stopOnErrors: true
+stopOnErrors: false
 showButtonPreviousPage: true
 remoteService: service/write.php
 
-
 pages:
     - type: generic
-      id: first_page
-      name: Welcome
-      content: Welcome to webMUSHRA!       
-    - type: mushra
-      id: trial1
-      name: MUSHRA
-      content: This training shows how to use our user interface. Please perform the underlined instructions to proceed with the training session. Reminder: In a MUSHRA listening test you are asked to rate the Basic Audio Quality (BAQ) of each condition.<br/>Basic Audio Quality is a single and global attribute that is used to judge any and all detected differences between the reference and the condition.
-      showWaveform: true
-      enableLooping: true 
-      reference: configs/resources/audio/mono_ref.wav
-      createAnchor35: true
-      createAnchor70: true
-      stimuli:
-          C1: configs/resources/audio/mono_c1.wav
-          C2: configs/resources/audio/mono_c2.wav
-          C3: configs/resources/audio/mono_c3.wav
-    - 
-          - random
-          - type: mushra
-            id: trial_random_1
-            name: MUSHRA - Random 2
-            content: Due to randomization, this page will be either the second MUSHRA page or the third MUSHRA page.
-            enableLooping: true 
-            reference: configs/resources/audio/mono_ref.wav
-            createAnchor35: false
-            createAnchor70: false
-            stimuli:
-                C1: configs/resources/audio/mono_c1.wav
-                C2: configs/resources/audio/mono_c2.wav
-                C3: configs/resources/audio/mono_c3.wav          
-          - type: mushra
-            id: trial_random_2
-            name: MUSHRA - Random 1
-            content: Due to randomization, this page will be either the second MUSHRA page or the third MUSHRA page.
-            enableLooping: true 
-            reference: configs/resources/audio/mono_ref.wav
-            createAnchor35: false
-            createAnchor70: false
-            stimuli:
-                C1: configs/resources/audio/mono_c1.wav
-                C2: configs/resources/audio/mono_c2.wav
-                C3: configs/resources/audio/mono_c3.wav          
+      id: requisitos
+      name: Requisitos
+      content: <p> Prezado(a) participante, bem vindo(a) a um teste de avaliação perceptual de síntese de voz expressiva!</p> <p> Essa avaliação requer a escuta de amostras de áudio usando fones de ouvido em um ambiente silencioso. Por favor NÃO responda o teste caso:</p> <p> 1. Você não possua fones de ouvido,</p><p>2. Seu ambiente possua ruído de fundo comprometedor,</p><p>3. Você sofra algum tipo de déficit auditivo,</p><p>4. Se, por alguma razão, você não conseguir ouvir as amostras de áudio.</p><p>Caso julgue atender os requisitos da avaliação, clique em "Pŕoximo":</p>
+
+    - type: volume
+      id: ajuste_volume
+      name: Ajuste de Volume
+      content: Por favor, ajuste o volume de maneira que o abaixo fique intelígivel.
+      stimulus: configs/resources/audio/mono_ref.wav
+      defaultVolume: 0.5
+
+    - type: generic
+      id: instruções_naturalidade
+      name: Tarefa 1 - Avaliação de Naturalidade
+      content: <p>Nessa tarefa, você receberá diversas frases. Para cada frase, quatro áudios pronunciando-a serão disponibilizados para avaliação.</p><p>A sua tarefa é quantificar o quão natural cada um dos áudios disponibilizados soou em um intervalo de 0 a 100, sendo 0 correspondente a COMPLETAMENTE ARTIFICIAL e 100 a COMPLETAMENTE NATURAL.</p><p>Uma referência de entoação natural é dada para nortear cada exemplo.</p><p>Você NÃO DEVE julgar ruídos, falhas, cliques, a gramática ou contexto, apenas como ela soa.</p><p>Você DEVE julgar qualidades do tipo:</p><p> "O quão provavél uma pessoa poderia ter falado dessa maneira?"</p>
+      
+    -
+      - random   
+      -
+        - type: mushra
+          id: neutro_1
+          name: Tarefa 1 - Avaliação de Naturalidade
+          content: Considerando a referência um exemplo de entoação natural, avalie a naturalidade de cada entoação abaixo.
+          showWaveform: false
+          enableLooping: false
+          reference: configs/resources/audio/mono_ref.wav
+          randomize: true
+          showConditionNames: false
+          createAnchor35: false
+          createAnchor70: false
+          stimuli:
+              LowAnchor: configs/resources/audio/mono_c1.wav
+              Baseline: configs/resources/audio/mono_c2.wav
+              Proposed: configs/resources/audio/mono_c3.wav
+      -  
+        - type: mushra
+          id: neutro_2
+          name: Tarefa 1 - Avaliação de Naturalidade
+          content: Considerando a referência um exemplo de entoação natural, avalie a naturalidade de cada entoação abaixo.
+          showWaveform: true
+          enableLooping: false
+          reference: configs/resources/audio/mono_ref.wav
+          randomize: true
+          showConditionNames: false
+          createAnchor35: false
+          createAnchor70: false
+          stimuli:
+              LowAnchor: configs/resources/audio/mono_c1.wav
+              Baseline: configs/resources/audio/mono_c2.wav
+              Proposed: configs/resources/audio/mono_c3.wav
+      -  
+        - type: mushra
+          id: neutro_3
+          name: Tarefa 1 - Avaliação de Naturalidade
+          content: Considerando a referência um exemplo de entoação natural, avalie a naturalidade de cada entoação abaixo.
+          showWaveform: true
+          enableLooping: false
+          reference: configs/resources/audio/mono_ref.wav
+          randomize: true
+          showConditionNames: false
+          createAnchor35: false
+          createAnchor70: false
+          stimuli:
+              LowAnchor: configs/resources/audio/mono_c1.wav
+              Baseline: configs/resources/audio/mono_c2.wav
+              Proposed: configs/resources/audio/mono_c3.wav
+      -
+        - type: mushra
+          id: neutro_4
+          name: Tarefa 1 - Avaliação de Naturalidade
+          content: Considerando a referência um exemplo de entoação natural, avalie a naturalidade de cada entoação abaixo.
+          showWaveform: true
+          enableLooping: false
+          reference: configs/resources/audio/mono_ref.wav
+          randomize: true
+          showConditionNames: false
+          createAnchor35: false
+          createAnchor70: false
+          stimuli:
+              LowAnchor: configs/resources/audio/mono_c1.wav
+              Baseline: configs/resources/audio/mono_c2.wav
+              Proposed: configs/resources/audio/mono_c3.wav
+      -
+        - type: mushra
+          id: neutro_5
+          name: Tarefa 1 - Avaliação de Naturalidade
+          content: Considerando a referência um exemplo de entoação natural, avalie a naturalidade de cada entoação abaixo.
+          showWaveform: true
+          enableLooping: false
+          reference: configs/resources/audio/mono_ref.wav
+          randomize: true
+          showConditionNames: false
+          createAnchor35: false
+          createAnchor70: false
+          stimuli:
+              LowAnchor: configs/resources/audio/mono_c1.wav
+              Baseline: configs/resources/audio/mono_c2.wav
+              Proposed: configs/resources/audio/mono_c3.wav
+      -  
+        - type: mushra
+          id: neutro_6
+          name: Tarefa 1 - Avaliação de Naturalidade
+          content: Considerando a referência um exemplo de entoação natural, avalie a naturalidade de cada entoação abaixo.
+          showWaveform: true
+          enableLooping: false
+          reference: configs/resources/audio/mono_ref.wav
+          randomize: true
+          showConditionNames: false
+          createAnchor35: false
+          createAnchor70: false
+          stimuli:
+              LowAnchor: configs/resources/audio/mono_c1.wav
+              Baseline: configs/resources/audio/mono_c2.wav
+              Proposed: configs/resources/audio/mono_c3.wav
+      -  
+        - type: mushra
+          id: neutro_7
+          name: Tarefa 1 - Avaliação de Naturalidade
+          content: Considerando a referência um exemplo de entoação natural, avalie a naturalidade de cada entoação abaixo.
+          showWaveform: true
+          enableLooping: false
+          reference: configs/resources/audio/mono_ref.wav
+          randomize: true
+          showConditionNames: false
+          createAnchor35: false
+          createAnchor70: false
+          stimuli:
+              LowAnchor: configs/resources/audio/mono_c1.wav
+              Baseline: configs/resources/audio/mono_c2.wav
+              Proposed: configs/resources/audio/mono_c3.wav
+      -
+        - type: mushra
+          id: neutro_8
+          name: Tarefa 1 - Avaliação de Naturalidade
+          content: Considerando a referência um exemplo de entoação natural, avalie a naturalidade de cada entoação abaixo.
+          showWaveform: true
+          enableLooping: false
+          reference: configs/resources/audio/mono_ref.wav
+          randomize: true
+          showConditionNames: false
+          createAnchor35: false
+          createAnchor70: false
+          stimuli:
+              LowAnchor: configs/resources/audio/mono_c1.wav
+              Baseline: configs/resources/audio/mono_c2.wav
+              Proposed: configs/resources/audio/mono_c3.wav
+      -
+        - type: mushra
+          id: neutro_9
+          name: Tarefa 1 - Avaliação de Naturalidade
+          content: Considerando a referência um exemplo de entoação natural, avalie a naturalidade de cada entoação abaixo.
+          showWaveform: true
+          enableLooping: false
+          reference: configs/resources/audio/mono_ref.wav
+          randomize: true
+          showConditionNames: false
+          createAnchor35: false
+          createAnchor70: false
+          stimuli:
+              LowAnchor: configs/resources/audio/mono_c1.wav
+              Baseline: configs/resources/audio/mono_c2.wav
+              Proposed: configs/resources/audio/mono_c3.wav
+      -
+        - type: mushra
+          id: neutro_10
+          name: Tarefa 1 - Avaliação de Naturalidade
+          content: Considerando a referência um exemplo de entoação natural, avalie a naturalidade de cada entoação abaixo.
+          showWaveform: true
+          enableLooping: false
+          reference: configs/resources/audio/mono_ref.wav
+          randomize: true
+          showConditionNames: false
+          createAnchor35: false
+          createAnchor70: false
+          stimuli:
+              LowAnchor: configs/resources/audio/mono_c1.wav
+              Baseline: configs/resources/audio/mono_c2.wav
+              Proposed: configs/resources/audio/mono_c3.wav
+      -
+        - type: mushra
+          id: animado_1
+          name: Tarefa 1 - Avaliação de Naturalidade
+          content: Considerando a referência um exemplo de entoação natural, avalie a naturalidade de cada entoação abaixo.
+          showWaveform: true
+          enableLooping: false
+          reference: configs/resources/audio/mono_ref.wav
+          randomize: true
+          showConditionNames: false
+          createAnchor35: false
+          createAnchor70: false
+          stimuli:
+              LowAnchor: configs/resources/audio/mono_c1.wav
+              Baseline: configs/resources/audio/mono_c2.wav
+              Proposed: configs/resources/audio/mono_c3.wav
+      -  
+        - type: mushra
+          id: animado_2
+          name: Tarefa 1 - Avaliação de Naturalidade
+          content: Considerando a referência um exemplo de entoação natural, avalie a naturalidade de cada entoação abaixo.
+          showWaveform: true
+          enableLooping: false
+          reference: configs/resources/audio/mono_ref.wav
+          randomize: true
+          showConditionNames: false
+          createAnchor35: false
+          createAnchor70: false
+          stimuli:
+              LowAnchor: configs/resources/audio/mono_c1.wav
+              Baseline: configs/resources/audio/mono_c2.wav
+              Proposed: configs/resources/audio/mono_c3.wav
+      -  
+        - type: mushra
+          id: animado_3
+          name: Tarefa 1 - Avaliação de Naturalidade
+          content: Considerando a referência um exemplo de entoação natural, avalie a naturalidade de cada entoação abaixo.
+          showWaveform: true
+          enableLooping: false
+          reference: configs/resources/audio/mono_ref.wav
+          randomize: true
+          showConditionNames: false
+          createAnchor35: false
+          createAnchor70: false
+          stimuli:
+              LowAnchor: configs/resources/audio/mono_c1.wav
+              Baseline: configs/resources/audio/mono_c2.wav
+              Proposed: configs/resources/audio/mono_c3.wav
+      -
+        - type: mushra
+          id: animado_4
+          name: Tarefa 1 - Avaliação de Naturalidade
+          content: Considerando a referência um exemplo de entoação natural, avalie a naturalidade de cada entoação abaixo.
+          showWaveform: true
+          enableLooping: false
+          reference: configs/resources/audio/mono_ref.wav
+          randomize: true
+          showConditionNames: false
+          createAnchor35: false
+          createAnchor70: false
+          stimuli:
+              LowAnchor: configs/resources/audio/mono_c1.wav
+              Baseline: configs/resources/audio/mono_c2.wav
+              Proposed: configs/resources/audio/mono_c3.wav
+      -
+        - type: mushra
+          id: animado_5
+          name: Tarefa 1 - Avaliação de Naturalidade
+          content: Considerando a referência um exemplo de entoação natural, avalie a naturalidade de cada entoação abaixo.
+          showWaveform: true
+          enableLooping: false
+          reference: configs/resources/audio/mono_ref.wav
+          randomize: true
+          showConditionNames: false
+          createAnchor35: false
+          createAnchor70: false
+          stimuli:
+              LowAnchor: configs/resources/audio/mono_c1.wav
+              Baseline: configs/resources/audio/mono_c2.wav
+              Proposed: configs/resources/audio/mono_c3.wav
+      - 
+        - type: mushra
+          id: animado_6
+          name: Tarefa 1 - Avaliação de Naturalidade
+          content: Considerando a referência um exemplo de entoação natural, avalie a naturalidade de cada entoação abaixo.
+          showWaveform: true
+          enableLooping: false
+          reference: configs/resources/audio/mono_ref.wav
+          randomize: true
+          showConditionNames: false
+          createAnchor35: false
+          createAnchor70: false
+          stimuli:
+              LowAnchor: configs/resources/audio/mono_c1.wav
+              Baseline: configs/resources/audio/mono_c2.wav
+              Proposed: configs/resources/audio/mono_c3.wav
+      - 
+        - type: mushra
+          id: animado_7
+          name: Tarefa 1 - Avaliação de Naturalidade
+          content: Considerando a referência um exemplo de entoação natural, avalie a naturalidade de cada entoação abaixo.
+          showWaveform: true
+          enableLooping: false
+          reference: configs/resources/audio/mono_ref.wav
+          randomize: true
+          showConditionNames: false
+          createAnchor35: false
+          createAnchor70: false
+          stimuli:
+              LowAnchor: configs/resources/audio/mono_c1.wav
+              Baseline: configs/resources/audio/mono_c2.wav
+              Proposed: configs/resources/audio/mono_c3.wav
+      -
+        - type: mushra
+          id: animado_8
+          name: Tarefa 1 - Avaliação de Naturalidade
+          content: Considerando a referência um exemplo de entoação natural, avalie a naturalidade de cada entoação abaixo.
+          showWaveform: true
+          enableLooping: false
+          reference: configs/resources/audio/mono_ref.wav
+          randomize: true
+          showConditionNames: false
+          createAnchor35: false
+          createAnchor70: false
+          stimuli:
+              LowAnchor: configs/resources/audio/mono_c1.wav
+              Baseline: configs/resources/audio/mono_c2.wav
+              Proposed: configs/resources/audio/mono_c3.wav
+      -
+        - type: mushra
+          id: animado_9
+          name: Tarefa 1 - Avaliação de Naturalidade
+          content: Considerando a referência um exemplo de entoação natural, avalie a naturalidade de cada entoação abaixo.
+          showWaveform: true
+          enableLooping: false
+          reference: configs/resources/audio/mono_ref.wav
+          randomize: true
+          showConditionNames: false
+          createAnchor35: false
+          createAnchor70: false
+          stimuli:
+              LowAnchor: configs/resources/audio/mono_c1.wav
+              Baseline: configs/resources/audio/mono_c2.wav
+              Proposed: configs/resources/audio/mono_c3.wav
+      -
+        - type: mushra
+          id: animado_10
+          name: Tarefa 1 - Avaliação de Naturalidade
+          content: Considerando a referência um exemplo de entoação natural, avalie a naturalidade de cada entoação abaixo.
+          showWaveform: true
+          enableLooping: false
+          reference: configs/resources/audio/mono_ref.wav
+          randomize: true
+          showConditionNames: false
+          createAnchor35: false
+          createAnchor70: false
+          stimuli:
+              LowAnchor: configs/resources/audio/mono_c1.wav
+              Baseline: configs/resources/audio/mono_c2.wav
+              Proposed: configs/resources/audio/mono_c3.wav
+      -
+        - type: mushra
+          id: acolhedor_1
+          name: Tarefa 1 - Avaliação de Naturalidade
+          content: Considerando a referência um exemplo de entoação natural, avalie a naturalidade de cada entoação abaixo.
+          showWaveform: true
+          enableLooping: false
+          reference: configs/resources/audio/mono_ref.wav
+          randomize: true
+          showConditionNames: false
+          createAnchor35: false
+          createAnchor70: false
+          stimuli:
+              LowAnchor: configs/resources/audio/mono_c1.wav
+              Baseline: configs/resources/audio/mono_c2.wav
+              Proposed: configs/resources/audio/mono_c3.wav
+      -
+        - type: mushra
+          id: acolhedor_2
+          name: Tarefa 1 - Avaliação de Naturalidade
+          content: Considerando a referência um exemplo de entoação natural, avalie a naturalidade de cada entoação abaixo.
+          showWaveform: true
+          enableLooping: false
+          reference: configs/resources/audio/mono_ref.wav
+          randomize: true
+          showConditionNames: false
+          createAnchor35: false
+          createAnchor70: false
+          stimuli:
+              LowAnchor: configs/resources/audio/mono_c1.wav
+              Baseline: configs/resources/audio/mono_c2.wav
+              Proposed: configs/resources/audio/mono_c3.wav
+      - 
+        - type: mushra
+          id: acolhedor_3
+          name: Tarefa 1 - Avaliação de Naturalidade
+          content: Considerando a referência um exemplo de entoação natural, avalie a naturalidade de cada entoação abaixo.
+          showWaveform: true
+          enableLooping: false
+          reference: configs/resources/audio/mono_ref.wav
+          randomize: true
+          showConditionNames: false
+          createAnchor35: false
+          createAnchor70: false
+          stimuli:
+              LowAnchor: configs/resources/audio/mono_c1.wav
+              Baseline: configs/resources/audio/mono_c2.wav
+              Proposed: configs/resources/audio/mono_c3.wav
+      -
+        - type: mushra
+          id: acolhedor_4
+          name: Tarefa 1 - Avaliação de Naturalidade
+          content: Considerando a referência um exemplo de entoação natural, avalie a naturalidade de cada entoação abaixo.
+          showWaveform: true
+          enableLooping: false
+          reference: configs/resources/audio/mono_ref.wav
+          randomize: true
+          showConditionNames: false
+          createAnchor35: false
+          createAnchor70: false
+          stimuli:
+              LowAnchor: configs/resources/audio/mono_c1.wav
+              Baseline: configs/resources/audio/mono_c2.wav
+              Proposed: configs/resources/audio/mono_c3.wav
+      -
+        - type: mushra
+          id: acolhedor_5
+          name: Tarefa 1 - Avaliação de Naturalidade
+          content: Considerando a referência um exemplo de entoação natural, avalie a naturalidade de cada entoação abaixo.
+          showWaveform: true
+          enableLooping: false
+          reference: configs/resources/audio/mono_ref.wav
+          randomize: true
+          showConditionNames: false
+          createAnchor35: false
+          createAnchor70: false
+          stimuli:
+              LowAnchor: configs/resources/audio/mono_c1.wav
+              Baseline: configs/resources/audio/mono_c2.wav
+              Proposed: configs/resources/audio/mono_c3.wav
+      -
+        - type: mushra
+          id: acolhedor_6
+          name: Tarefa 1 - Avaliação de Naturalidade
+          content: Considerando a referência um exemplo de entoação natural, avalie a naturalidade de cada entoação abaixo.
+          showWaveform: true
+          enableLooping: false
+          reference: configs/resources/audio/mono_ref.wav
+          randomize: true
+          showConditionNames: false
+          createAnchor35: false
+          createAnchor70: false
+          stimuli:
+              LowAnchor: configs/resources/audio/mono_c1.wav
+              Baseline: configs/resources/audio/mono_c2.wav
+              Proposed: configs/resources/audio/mono_c3.wav
+      - 
+        - type: mushra
+          id: acolhedor_7
+          name: Tarefa 1 - Avaliação de Naturalidade
+          content: Considerando a referência um exemplo de entoação natural, avalie a naturalidade de cada entoação abaixo.
+          showWaveform: true
+          enableLooping: false
+          reference: configs/resources/audio/mono_ref.wav
+          randomize: true
+          showConditionNames: false
+          createAnchor35: false
+          createAnchor70: false
+          stimuli:
+              LowAnchor: configs/resources/audio/mono_c1.wav
+              Baseline: configs/resources/audio/mono_c2.wav
+              Proposed: configs/resources/audio/mono_c3.wav
+      -
+        - type: mushra
+          id: acolhedor_8
+          name: Tarefa 1 - Avaliação de Naturalidade
+          content: Considerando a referência um exemplo de entoação natural, avalie a naturalidade de cada entoação abaixo.
+          showWaveform: true
+          enableLooping: false
+          reference: configs/resources/audio/mono_ref.wav
+          randomize: true
+          showConditionNames: false
+          createAnchor35: false
+          createAnchor70: false
+          stimuli:
+              LowAnchor: configs/resources/audio/mono_c1.wav
+              Baseline: configs/resources/audio/mono_c2.wav
+              Proposed: configs/resources/audio/mono_c3.wav
+      -
+        - type: mushra
+          id: acolhedor_9
+          name: Tarefa 1 - Avaliação de Naturalidade
+          content: Considerando a referência um exemplo de entoação natural, avalie a naturalidade de cada entoação abaixo.
+          showWaveform: true
+          enableLooping: false
+          reference: configs/resources/audio/mono_ref.wav
+          randomize: true
+          showConditionNames: false
+          createAnchor35: false
+          createAnchor70: false
+          stimuli:
+              LowAnchor: configs/resources/audio/mono_c1.wav
+              Baseline: configs/resources/audio/mono_c2.wav
+              Proposed: configs/resources/audio/mono_c3.wav
+      -
+        - type: mushra
+          id: acolhedor_10
+          name: Tarefa 1 - Avaliação de Naturalidade
+          content: Considerando a referência um exemplo de entoação natural, avalie a naturalidade de cada entoação abaixo.
+          showWaveform: true
+          enableLooping: false
+          reference: configs/resources/audio/mono_ref.wav
+          randomize: true
+          showConditionNames: false
+          createAnchor35: false
+          createAnchor70: false
+          stimuli:
+              LowAnchor: configs/resources/audio/mono_c1.wav
+              Baseline: configs/resources/audio/mono_c2.wav
+              Proposed: configs/resources/audio/mono_c3.wav
+      -
+        - type: mushra
+          id: rispido_1
+          name: Tarefa 1 - Avaliação de Naturalidade
+          content: Considerando a referência um exemplo de entoação natural, avalie a naturalidade de cada entoação abaixo.
+          showWaveform: true
+          enableLooping: false
+          reference: configs/resources/audio/mono_ref.wav
+          randomize: true
+          showConditionNames: false
+          createAnchor35: false
+          createAnchor70: false
+          stimuli:
+              LowAnchor: configs/resources/audio/mono_c1.wav
+              Baseline: configs/resources/audio/mono_c2.wav
+              Proposed: configs/resources/audio/mono_c3.wav
+      -    
+        - type: mushra
+          id: rispido_2
+          name: Tarefa 1 - Avaliação de Naturalidade
+          content: Considerando a referência um exemplo de entoação natural, avalie a naturalidade de cada entoação abaixo.
+          showWaveform: true
+          enableLooping: false
+          reference: configs/resources/audio/mono_ref.wav
+          randomize: true
+          showConditionNames: false
+          createAnchor35: false
+          createAnchor70: false
+          stimuli:
+              LowAnchor: configs/resources/audio/mono_c1.wav
+              Baseline: configs/resources/audio/mono_c2.wav
+              Proposed: configs/resources/audio/mono_c3.wav
+      -  
+        - type: mushra
+          id: rispido_3
+          name: Tarefa 1 - Avaliação de Naturalidade
+          content: Considerando a referência um exemplo de entoação natural, avalie a naturalidade de cada entoação abaixo.
+          showWaveform: true
+          enableLooping: false
+          reference: configs/resources/audio/mono_ref.wav
+          randomize: true
+          showConditionNames: false
+          createAnchor35: false
+          createAnchor70: false
+          stimuli:
+              LowAnchor: configs/resources/audio/mono_c1.wav
+              Baseline: configs/resources/audio/mono_c2.wav
+              Proposed: configs/resources/audio/mono_c3.wav
+      -
+        - type: mushra
+          id: rispido_4
+          name: Tarefa 1 - Avaliação de Naturalidade
+          content: Considerando a referência um exemplo de entoação natural, avalie a naturalidade de cada entoação abaixo.
+          showWaveform: true
+          enableLooping: false
+          reference: configs/resources/audio/mono_ref.wav
+          randomize: true
+          showConditionNames: false
+          createAnchor35: false
+          createAnchor70: false
+          stimuli:
+              LowAnchor: configs/resources/audio/mono_c1.wav
+              Baseline: configs/resources/audio/mono_c2.wav
+              Proposed: configs/resources/audio/mono_c3.wav
+      -
+        - type: mushra
+          id: rispido_5
+          name: Tarefa 1 - Avaliação de Naturalidade
+          content: Considerando a referência um exemplo de entoação natural, avalie a naturalidade de cada entoação abaixo.
+          showWaveform: true
+          enableLooping: false
+          reference: configs/resources/audio/mono_ref.wav
+          randomize: true
+          showConditionNames: false
+          createAnchor35: false
+          createAnchor70: false
+          stimuli:
+              LowAnchor: configs/resources/audio/mono_c1.wav
+              Baseline: configs/resources/audio/mono_c2.wav
+              Proposed: configs/resources/audio/mono_c3.wav
+      -
+        - type: mushra
+          id: rispido_6
+          name: Tarefa 1 - Avaliação de Naturalidade
+          content: Considerando a referência um exemplo de entoação natural, avalie a naturalidade de cada entoação abaixo.
+          showWaveform: true
+          enableLooping: false
+          reference: configs/resources/audio/mono_ref.wav
+          randomize: true
+          showConditionNames: false
+          createAnchor35: false
+          createAnchor70: false
+          stimuli:
+              LowAnchor: configs/resources/audio/mono_c1.wav
+              Baseline: configs/resources/audio/mono_c2.wav
+              Proposed: configs/resources/audio/mono_c3.wav
+      -  
+        - type: mushra
+          id: rispido_7
+          name: Tarefa 1 - Avaliação de Naturalidade
+          content: Considerando a referência um exemplo de entoação natural, avalie a naturalidade de cada entoação abaixo.
+          showWaveform: true
+          enableLooping: false
+          reference: configs/resources/audio/mono_ref.wav
+          randomize: true
+          showConditionNames: false
+          createAnchor35: false
+          createAnchor70: false
+          stimuli:
+              LowAnchor: configs/resources/audio/mono_c1.wav
+              Baseline: configs/resources/audio/mono_c2.wav
+              Proposed: configs/resources/audio/mono_c3.wav
+      -
+        - type: mushra
+          id: rispido_8
+          name: Tarefa 1 - Avaliação de Naturalidade
+          content: Considerando a referência um exemplo de entoação natural, avalie a naturalidade de cada entoação abaixo.
+          showWaveform: true
+          enableLooping: false
+          reference: configs/resources/audio/mono_ref.wav
+          randomize: true
+          showConditionNames: false
+          createAnchor35: false
+          createAnchor70: false
+          stimuli:
+              LowAnchor: configs/resources/audio/mono_c1.wav
+              Baseline: configs/resources/audio/mono_c2.wav
+              Proposed: configs/resources/audio/mono_c3.wav
+      -
+        - type: mushra
+          id: rispido_9
+          name: Tarefa 1 - Avaliação de Naturalidade
+          content: Considerando a referência um exemplo de entoação natural, avalie a naturalidade de cada entoação abaixo.
+          showWaveform: true
+          enableLooping: false
+          reference: configs/resources/audio/mono_ref.wav
+          randomize: true
+          showConditionNames: false
+          createAnchor35: false
+          createAnchor70: false
+          stimuli:
+              LowAnchor: configs/resources/audio/mono_c1.wav
+              Baseline: configs/resources/audio/mono_c2.wav
+              Proposed: configs/resources/audio/mono_c3.wav
+      -
+        - type: mushra
+          id: rispido_10
+          name: Tarefa 1 - Avaliação de Naturalidade
+          content: Considerando a referência um exemplo de entoação natural, avalie a naturalidade de cada entoação abaixo.
+          showWaveform: true
+          enableLooping: false
+          reference: configs/resources/audio/mono_ref.wav
+          randomize: true
+          showConditionNames: false
+          createAnchor35: false
+          createAnchor70: false
+          stimuli:
+              LowAnchor: configs/resources/audio/mono_c1.wav
+              Baseline: configs/resources/audio/mono_c2.wav
+              Proposed: configs/resources/audio/mono_c3.wav
+
+    - type: generic
+      id: instruções_pairedcomparison
+      name: Tarefa 2 - Comparação de Estilo
+      content: <p>Nessa tarefa, para cada frase você receberá uma referência e dois áudios (A e B).</p><p>A sua tarefa é a de identificar qual dos dois áudios (A ou B) tem o ESTILO MAIS PARECIDO com a da referência.</p><p>Por estilo, entende-se caracteísticas do tipo entonação, acentos, etc.</p><p>Fatores que possam indicar estilo são o tom de fala (como ele aumenta e diminui ao longo da fala), o acento colocado em cada palavra ou sílaba, a velocidade de fala (e como ela muda) e as pausas.</p><p> Animado, Acolhedor, Neutro e Ríspido são alguns exemplos de estilo de fala.</p><p>Atente-se ao fato de que o texto falado dos áudios A e B não necessariamente corresponde ao da referência. Deve-se apenas identificar qual ESTILO mais se parece com a referência, independente do texto.</p><p>Por exemplo, caso você identifique a referência como tendo um estilo "animado", por mais que o texto falado dos áudios A e B sejam diferentes da referência, aquele que mais se aproximar do estilo "animado" deve ser o escolhido.</p><p>Existe a opção "Igualmente Próximos" caso julgue que o estilo de A e B são igualmente próximos do da referência.</p>
+    
+    -
+      - random   
+      -      
+        - type: paired_comparison
+          id: paralelo_1
+          name: Tarefa 2 - Comparação de Estilo
+          content: Entre os áudios A e B, qual estilo mais se aproxima do estilo da referência?
+          unforced: Igualmente Próximos
+          showWaveform: false
+          enableLooping: false
+          reference: configs/resources/audio/mono_ref.wav
+          stimuli:
+                  LowAnchor: configs/resources/audio/mono_c1.wav
+                  Baseline: configs/resources/audio/mono_c2.wav
+      -  
+        - type: paired_comparison
+          id: paralelo_2
+          name: Tarefa 2 - Comparação de Estilo
+          content: Entre os áudios A e B, qual estilo mais se aproxima do estilo da referência?
+          unforced: Igualmente Próximos
+          showWaveform: false
+          enableLooping: false
+          reference: configs/resources/audio/mono_ref.wav
+          stimuli:
+                  LowAnchor: configs/resources/audio/mono_c1.wav
+                  Baseline: configs/resources/audio/mono_c2.wav
+      -    
+        - type: paired_comparison
+          id: paralelo_3
+          name: Tarefa 2 - Comparação de Estilo
+          content: Entre os áudios A e B, qual estilo mais se aproxima do estilo da referência?
+          unforced: Igualmente Próximos
+          showWaveform: false
+          enableLooping: false
+          reference: configs/resources/audio/mono_ref.wav
+          stimuli:
+                  LowAnchor: configs/resources/audio/mono_c1.wav
+                  Baseline: configs/resources/audio/mono_c2.wav
+      -  
+        - type: paired_comparison
+          id: paralelo_4
+          name: Tarefa 2 - Comparação de Estilo
+          content: Entre os áudios A e B, qual estilo mais se aproxima do estilo da referência?
+          unforced: Igualmente Próximos
+          showWaveform: false
+          enableLooping: false
+          reference: configs/resources/audio/mono_ref.wav
+          stimuli:
+                  LowAnchor: configs/resources/audio/mono_c1.wav
+                  Baseline: configs/resources/audio/mono_c2.wav
+      -
+        - type: paired_comparison
+          id: paralelo_5
+          name: Tarefa 2 - Comparação de Estilo
+          content: Entre os áudios A e B, qual estilo mais se aproxima do estilo da referência?
+          unforced: Igualmente Próximos
+          showWaveform: false
+          enableLooping: false
+          reference: configs/resources/audio/mono_ref.wav
+          stimuli:
+                  LowAnchor: configs/resources/audio/mono_c1.wav
+                  Baseline: configs/resources/audio/mono_c2.wav
+      -
+        - type: paired_comparison
+          id: paralelo_6
+          name: Tarefa 2 - Comparação de Estilo
+          content: Entre os áudios A e B, qual estilo mais se aproxima do estilo da referência?
+          unforced: Igualmente Próximos
+          showWaveform: false
+          enableLooping: false
+          reference: configs/resources/audio/mono_ref.wav
+          stimuli:
+                  LowAnchor: configs/resources/audio/mono_c1.wav
+                  Baseline: configs/resources/audio/mono_c2.wav
+      -  
+        - type: paired_comparison
+          id: paralelo_7
+          name: Tarefa 2 - Comparação de Estilo
+          content: Entre os áudios A e B, qual estilo mais se aproxima do estilo da referência?
+          unforced: Igualmente Próximos
+          showWaveform: false
+          enableLooping: false
+          reference: configs/resources/audio/mono_ref.wav
+          stimuli:
+                  LowAnchor: configs/resources/audio/mono_c1.wav
+                  Baseline: configs/resources/audio/mono_c2.wav
+      -    
+        - type: paired_comparison
+          id: paralelo_8
+          name: Tarefa 2 - Comparação de Estilo
+          content: Entre os áudios A e B, qual estilo mais se aproxima do estilo da referência?
+          unforced: Igualmente Próximos
+          showWaveform: false
+          enableLooping: false
+          reference: configs/resources/audio/mono_ref.wav
+          stimuli:
+                  LowAnchor: configs/resources/audio/mono_c1.wav
+                  Baseline: configs/resources/audio/mono_c2.wav
+      -  
+        - type: paired_comparison
+          id: paralelo_9
+          name: Tarefa 2 - Comparação de Estilo
+          content: Entre os áudios A e B, qual estilo mais se aproxima do estilo da referência?
+          unforced: Igualmente Próximos
+          showWaveform: false
+          enableLooping: false
+          reference: configs/resources/audio/mono_ref.wav
+          stimuli:
+                  LowAnchor: configs/resources/audio/mono_c1.wav
+                  Baseline: configs/resources/audio/mono_c2.wav
+      -
+        - type: paired_comparison
+          id: paralelo_10
+          name: Tarefa 2 - Comparação de Estilo
+          content: Entre os áudios A e B, qual estilo mais se aproxima do estilo da referência?
+          unforced: Igualmente Próximos
+          showWaveform: false
+          enableLooping: false
+          reference: configs/resources/audio/mono_ref.wav
+          stimuli:
+                  LowAnchor: configs/resources/audio/mono_c1.wav
+                  Baseline: configs/resources/audio/mono_c2.wav
+      -  
+        - type: paired_comparison
+          id: nao_paralelo_1
+          name: Tarefa 2 - Comparação de Estilo
+          content: Entre os áudios A e B, qual estilo mais se aproxima do estilo da referência?
+          unforced: Igualmente Próximos
+          showWaveform: false
+          enableLooping: false
+          reference: configs/resources/audio/mono_ref.wav
+          stimuli:
+                  LowAnchor: configs/resources/audio/mono_c1.wav
+                  Baseline: configs/resources/audio/mono_c2.wav
+      -  
+        - type: paired_comparison
+          id: nao_paralelo_2
+          name: Tarefa 2 - Comparação de Estilo
+          content: Entre os áudios A e B, qual estilo mais se aproxima do estilo da referência?
+          unforced: Igualmente Próximos
+          showWaveform: false
+          enableLooping: false
+          reference: configs/resources/audio/mono_ref.wav
+          stimuli:
+                  LowAnchor: configs/resources/audio/mono_c1.wav
+                  Baseline: configs/resources/audio/mono_c2.wav
+      -    
+        - type: paired_comparison
+          id: nao_paralelo_3
+          name: Tarefa 2 - Comparação de Estilo
+          content: Entre os áudios A e B, qual estilo mais se aproxima do estilo da referência?
+          unforced: Igualmente Próximos
+          showWaveform: false
+          enableLooping: false
+          reference: configs/resources/audio/mono_ref.wav
+          stimuli:
+                  LowAnchor: configs/resources/audio/mono_c1.wav
+                  Baseline: configs/resources/audio/mono_c2.wav
+      -  
+        - type: paired_comparison
+          id: nao_paralelo_4
+          name: Tarefa 2 - Comparação de Estilo
+          content: Entre os áudios A e B, qual estilo mais se aproxima do estilo da referência?
+          unforced: Igualmente Próximos
+          showWaveform: false
+          enableLooping: false
+          reference: configs/resources/audio/mono_ref.wav
+          stimuli:
+                  LowAnchor: configs/resources/audio/mono_c1.wav
+                  Baseline: configs/resources/audio/mono_c2.wav
+      -
+        - type: paired_comparison
+          id: nao_paralelo_5
+          name: Tarefa 2 - Comparação de Estilo
+          content: Entre os áudios A e B, qual estilo mais se aproxima do estilo da referência?
+          unforced: Igualmente Próximos
+          showWaveform: false
+          enableLooping: false
+          reference: configs/resources/audio/mono_ref.wav
+          stimuli:
+                  LowAnchor: configs/resources/audio/mono_c1.wav
+                  Baseline: configs/resources/audio/mono_c2.wav
+      -
+        - type: paired_comparison
+          id: nao_paralelo_6
+          name: Tarefa 2 - Comparação de Estilo
+          content: Entre os áudios A e B, qual estilo mais se aproxima do estilo da referência?
+          unforced: Igualmente Próximos
+          showWaveform: false
+          enableLooping: false
+          reference: configs/resources/audio/mono_ref.wav
+          stimuli:
+                  LowAnchor: configs/resources/audio/mono_c1.wav
+                  Baseline: configs/resources/audio/mono_c2.wav
+      - 
+        - type: paired_comparison
+          id: nao_paralelo_7
+          name: Tarefa 2 - Comparação de Estilo
+          content: Entre os áudios A e B, qual estilo mais se aproxima do estilo da referência?
+          unforced: Igualmente Próximos
+          showWaveform: false
+          enableLooping: false
+          reference: configs/resources/audio/mono_ref.wav
+          stimuli:
+                  LowAnchor: configs/resources/audio/mono_c1.wav
+                  Baseline: configs/resources/audio/mono_c2.wav
+      -    
+        - type: paired_comparison
+          id: nao_paralelo_8
+          name: Tarefa 2 - Comparação de Estilo
+          content: Entre os áudios A e B, qual estilo mais se aproxima do estilo da referência?
+          unforced: Igualmente Próximos
+          showWaveform: false
+          enableLooping: false
+          reference: configs/resources/audio/mono_ref.wav
+          stimuli:
+                  LowAnchor: configs/resources/audio/mono_c1.wav
+                  Baseline: configs/resources/audio/mono_c2.wav
+      -    
+        - type: paired_comparison
+          id: nao_paralelo_9
+          name: Tarefa 2 - Comparação de Estilo
+          content: Entre os áudios A e B, qual estilo mais se aproxima do estilo da referência?
+          unforced: Igualmente Próximos
+          showWaveform: false
+          enableLooping: false
+          reference: configs/resources/audio/mono_ref.wav
+          stimuli:
+                  LowAnchor: configs/resources/audio/mono_c1.wav
+                  Baseline: configs/resources/audio/mono_c2.wav
+      -
+        - type: paired_comparison
+          id: nao_paralelo_10
+          name: Tarefa 2 - Comparação de Estilo
+          content: Entre os áudios A e B, qual estilo mais se aproxima do estilo da referência?
+          unforced: Igualmente Próximos
+          showWaveform: false
+          enableLooping: false
+          reference: configs/resources/audio/mono_ref.wav
+          stimuli:
+                  LowAnchor: configs/resources/audio/mono_c1.wav
+                  Baseline: configs/resources/audio/mono_c2.wav
+
     - type: finish
-      name: Thank you
-      content: Thank you for attending!
+      name: Finalização
+      content: Clique no botão abaixo para enviar os resultados!
+      popupContent: Os seus resultados foram enviados! Se quiser, confira-os abaixo! Tenha um bom dia!
       showResults: true
       writeResults: true
       questionnaire:
           - type: text
-            label: eMail
-            name: email
+            label: Nome
+            name: Nome
           - type: number
-            label: Age
-            name: age
+            label: Idade
+            name: Idade
             min: 0
             max: 100
             default: 30
           - type: likert
-            name: gender
-            label: Gender
+            name: Sexo
+            label: Sexo
             response:
-             - value: female
-               label: Female
-             - value: male
-               label: Male
-             - value: other
-               label: Other
+             - value: Feminino
+               label: Feminino
+             - value: Masculino
+               label: Masculino
+             - value: Outro
+               label: Outro

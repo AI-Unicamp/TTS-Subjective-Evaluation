@@ -138,9 +138,6 @@ if ($write_pc) {
 }
 
 
-//$command = escapeshellcmd('/home/leonardo/Documentos/Git Repositories/leonardoboulitreau.github.io/service/PUSHTOGIT.py');
-//$output = shell_exec($command);
-
 // bs1116
 
 $write_bs1116 = false;
@@ -486,5 +483,4 @@ if ($write_spatial_lev) {
 
 }
 
-// $comando = exec("/usr/bin/python3 PUSHTOGIT.py");
 ?>

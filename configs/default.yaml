@@ -17,661 +17,661 @@ pages:
       id: ajuste_volume
       name: Ajuste de Volume
       content: Por favor, ajuste o volume de maneira que o abaixo fique intelígivel.
-      stimulus: configs/resources/audio/mono_ref.wav
+      stimulus: configs/resources/audio/vaeflow/frase_31_speaker_adriana_emotion_neutro.wav
       defaultVolume: 0.5
 
     - type: generic
-      id: instruções_naturalidade
+      id: instruções_naturalidades
       name: Tarefa 1 - Avaliação de Naturalidade
-      content: <p>Nessa tarefa, você receberá diversas frases. Para cada frase, quatro áudios pronunciando-a serão disponibilizados para avaliação.</p><p>A sua tarefa é quantificar o quão natural cada um dos áudios disponibilizados soou em um intervalo de 0 a 100, sendo 0 correspondente a COMPLETAMENTE ARTIFICIAL e 100 a COMPLETAMENTE NATURAL.</p><p>Uma referência de entoação natural é dada para nortear cada exemplo.</p><p>Você NÃO DEVE julgar ruídos, falhas, cliques, a gramática ou contexto, apenas como ela soa.</p><p>Você DEVE julgar qualidades do tipo:</p><p> "O quão provavél uma pessoa poderia ter falado dessa maneira?"</p>
+      content: <p>Nessa tarefa, você ouvirá diversas frases. Para cada frase, quatro áudios pronunciando-a com sutis diferenças serão disponibilizados para avaliação.</p><p>A sua tarefa é quantificar ATENTAMENTE o quão natural cada um dos áudios disponibilizados soou em um intervalo de 0 a 100, sendo 0 correspondente a COMPLETAMENTE ARTIFICIAL e 100 a COMPLETAMENTE NATURAL.</p><p>Uma REFERÊNCIA DE ENTONAÇÃO NATURAL é dada para nortear cada exemplo.</p><p>Você NÃO DEVE julgar qualidade de áudio, ruídos, falhas, cliques, a gramática ou contexto, apenas como ela soa.</p><p>Você DEVE julgar qualidades do tipo:</p><p> "O quão provavél uma pessoa poderia ter falado dessa maneira?"</p>
       
     -
       - random   
       -
         - type: mushra
-          id: neutro_1
+          id: neutro_31
           name: Tarefa 1 - Avaliação de Naturalidade
-          content: Considerando a referência um exemplo de entoação natural, avalie a naturalidade de cada entoação abaixo.
+          content: Considerando a referência um exemplo de entonação natural, avalie a naturalidade de cada áudio abaixo.
           showWaveform: false
           enableLooping: false
-          reference: configs/resources/audio/mono_ref.wav
+          reference: configs/resources/audio/gt_ressintese/frase_31.wav
           randomize: true
           showConditionNames: false
           createAnchor35: false
           createAnchor70: false
           stimuli:
-              LowAnchor: configs/resources/audio/mono_c1.wav
-              Baseline: configs/resources/audio/mono_c2.wav
-              Proposed: configs/resources/audio/mono_c3.wav
+              LowAnchor: configs/resources/audio/vae/frase_31_speaker_adriana_emotion_neutro.wav
+              Baseline: configs/resources/audio/vaeflow/frase_31_speaker_adriana_emotion_neutro.wav
+              Proposed: configs/resources/audio/diff/frase_31_speaker_adriana_emotion_neutro.wav
       -  
         - type: mushra
-          id: neutro_2
+          id: neutro_45
           name: Tarefa 1 - Avaliação de Naturalidade
-          content: Considerando a referência um exemplo de entoação natural, avalie a naturalidade de cada entoação abaixo.
+          content: Considerando a referência um exemplo de entonação natural, avalie a naturalidade de cada áudio abaixo.
           showWaveform: true
           enableLooping: false
-          reference: configs/resources/audio/mono_ref.wav
+          reference: configs/resources/audio/gt_ressintese/frase_45.wav
           randomize: true
           showConditionNames: false
           createAnchor35: false
           createAnchor70: false
           stimuli:
-              LowAnchor: configs/resources/audio/mono_c1.wav
-              Baseline: configs/resources/audio/mono_c2.wav
-              Proposed: configs/resources/audio/mono_c3.wav
+              LowAnchor: configs/resources/audio/vae/frase_45_speaker_adriana_emotion_neutro.wav
+              Baseline: configs/resources/audio/vaeflow/frase_45_speaker_adriana_emotion_neutro.wav
+              Proposed: configs/resources/audio/diff/frase_45_speaker_adriana_emotion_neutro.wav
       -  
         - type: mushra
-          id: neutro_3
+          id: neutro_51
           name: Tarefa 1 - Avaliação de Naturalidade
-          content: Considerando a referência um exemplo de entoação natural, avalie a naturalidade de cada entoação abaixo.
+          content: Considerando a referência um exemplo de entonação natural, avalie a naturalidade de cada áudio abaixo.
           showWaveform: true
           enableLooping: false
-          reference: configs/resources/audio/mono_ref.wav
+          reference: configs/resources/audio/gt_ressintese/frase_51.wav
           randomize: true
           showConditionNames: false
           createAnchor35: false
           createAnchor70: false
           stimuli:
-              LowAnchor: configs/resources/audio/mono_c1.wav
-              Baseline: configs/resources/audio/mono_c2.wav
-              Proposed: configs/resources/audio/mono_c3.wav
+              LowAnchor: configs/resources/audio/vae/frase_51_speaker_adriana_emotion_neutro.wav
+              Baseline: configs/resources/audio/vaeflow/frase_51_speaker_adriana_emotion_neutro.wav
+              Proposed: configs/resources/audio/diff/frase_51_speaker_adriana_emotion_neutro.wav
       -
         - type: mushra
-          id: neutro_4
+          id: neutro_66
           name: Tarefa 1 - Avaliação de Naturalidade
-          content: Considerando a referência um exemplo de entoação natural, avalie a naturalidade de cada entoação abaixo.
+          content: Considerando a referência um exemplo de entonação natural, avalie a naturalidade de cada áudio abaixo.
           showWaveform: true
           enableLooping: false
-          reference: configs/resources/audio/mono_ref.wav
+          reference: configs/resources/audio/gt_ressintese/frase_66.wav
           randomize: true
           showConditionNames: false
           createAnchor35: false
           createAnchor70: false
           stimuli:
-              LowAnchor: configs/resources/audio/mono_c1.wav
-              Baseline: configs/resources/audio/mono_c2.wav
-              Proposed: configs/resources/audio/mono_c3.wav
+              LowAnchor: configs/resources/audio/vae/frase_66_speaker_adriana_emotion_neutro.wav
+              Baseline: configs/resources/audio/vaeflow/frase_66_speaker_adriana_emotion_neutro.wav
+              Proposed: configs/resources/audio/diff/frase_66_speaker_adriana_emotion_neutro.wav
       -
         - type: mushra
-          id: neutro_5
+          id: neutro_97
           name: Tarefa 1 - Avaliação de Naturalidade
-          content: Considerando a referência um exemplo de entoação natural, avalie a naturalidade de cada entoação abaixo.
+          content: Considerando a referência um exemplo de entonação natural, avalie a naturalidade de cada áudio abaixo.
           showWaveform: true
           enableLooping: false
-          reference: configs/resources/audio/mono_ref.wav
+          reference: configs/resources/audio/gt_ressintese/frase_97.wav
           randomize: true
           showConditionNames: false
           createAnchor35: false
           createAnchor70: false
           stimuli:
-              LowAnchor: configs/resources/audio/mono_c1.wav
-              Baseline: configs/resources/audio/mono_c2.wav
-              Proposed: configs/resources/audio/mono_c3.wav
+              LowAnchor: configs/resources/audio/vae/frase_97_speaker_adriana_emotion_neutro.wav
+              Baseline: configs/resources/audio/vaeflow/frase_97_speaker_adriana_emotion_neutro.wav
+              Proposed: configs/resources/audio/diff/frase_97_speaker_adriana_emotion_neutro.wav
       -  
         - type: mushra
-          id: neutro_6
+          id: neutro_106
           name: Tarefa 1 - Avaliação de Naturalidade
-          content: Considerando a referência um exemplo de entoação natural, avalie a naturalidade de cada entoação abaixo.
+          content: Considerando a referência um exemplo de entonação natural, avalie a naturalidade de cada áudio abaixo.
           showWaveform: true
           enableLooping: false
-          reference: configs/resources/audio/mono_ref.wav
+          reference: configs/resources/audio/gt_ressintese/frase_106.wav
           randomize: true
           showConditionNames: false
           createAnchor35: false
           createAnchor70: false
           stimuli:
-              LowAnchor: configs/resources/audio/mono_c1.wav
-              Baseline: configs/resources/audio/mono_c2.wav
-              Proposed: configs/resources/audio/mono_c3.wav
+              LowAnchor: configs/resources/audio/vae/frase_106_speaker_adriana_emotion_neutro.wav
+              Baseline: configs/resources/audio/vaeflow/frase_106_speaker_adriana_emotion_neutro.wav
+              Proposed: configs/resources/audio/diff/frase_106_speaker_adriana_emotion_neutro.wav
       -  
         - type: mushra
-          id: neutro_7
+          id: neutro_157
           name: Tarefa 1 - Avaliação de Naturalidade
-          content: Considerando a referência um exemplo de entoação natural, avalie a naturalidade de cada entoação abaixo.
+          content: Considerando a referência um exemplo de entonação natural, avalie a naturalidade de cada áudio abaixo.
           showWaveform: true
           enableLooping: false
-          reference: configs/resources/audio/mono_ref.wav
+          reference: configs/resources/audio/gt_ressintese/frase_157.wav
           randomize: true
           showConditionNames: false
           createAnchor35: false
           createAnchor70: false
           stimuli:
-              LowAnchor: configs/resources/audio/mono_c1.wav
-              Baseline: configs/resources/audio/mono_c2.wav
-              Proposed: configs/resources/audio/mono_c3.wav
+              LowAnchor: configs/resources/audio/vae/frase_157_speaker_adriana_emotion_neutro.wav
+              Baseline: configs/resources/audio/vaeflow/frase_157_speaker_adriana_emotion_neutro.wav
+              Proposed: configs/resources/audio/diff/frase_157_speaker_adriana_emotion_neutro.wav
       -
         - type: mushra
-          id: neutro_8
+          id: neutro_161
           name: Tarefa 1 - Avaliação de Naturalidade
-          content: Considerando a referência um exemplo de entoação natural, avalie a naturalidade de cada entoação abaixo.
+          content: Considerando a referência um exemplo de entonação natural, avalie a naturalidade de cada áudio abaixo.
           showWaveform: true
           enableLooping: false
-          reference: configs/resources/audio/mono_ref.wav
+          reference: configs/resources/audio/gt_ressintese/frase_161.wav
           randomize: true
           showConditionNames: false
           createAnchor35: false
           createAnchor70: false
           stimuli:
-              LowAnchor: configs/resources/audio/mono_c1.wav
-              Baseline: configs/resources/audio/mono_c2.wav
-              Proposed: configs/resources/audio/mono_c3.wav
+              LowAnchor: configs/resources/audio/vae/frase_161_speaker_adriana_emotion_neutro.wav
+              Baseline: configs/resources/audio/vaeflow/frase_161_speaker_adriana_emotion_neutro.wav
+              Proposed: configs/resources/audio/diff/frase_161_speaker_adriana_emotion_neutro.wav
       -
         - type: mushra
-          id: neutro_9
+          id: neutro_162
           name: Tarefa 1 - Avaliação de Naturalidade
-          content: Considerando a referência um exemplo de entoação natural, avalie a naturalidade de cada entoação abaixo.
+          content: Considerando a referência um exemplo de entonação natural, avalie a naturalidade de cada áudio abaixo.
           showWaveform: true
           enableLooping: false
-          reference: configs/resources/audio/mono_ref.wav
+          reference: configs/resources/audio/gt_ressintese/frase_162.wav
           randomize: true
           showConditionNames: false
           createAnchor35: false
           createAnchor70: false
           stimuli:
-              LowAnchor: configs/resources/audio/mono_c1.wav
-              Baseline: configs/resources/audio/mono_c2.wav
-              Proposed: configs/resources/audio/mono_c3.wav
+              LowAnchor: configs/resources/audio/vae/frase_162_speaker_adriana_emotion_neutro.wav
+              Baseline: configs/resources/audio/vaeflow/frase_162_speaker_adriana_emotion_neutro.wav
+              Proposed: configs/resources/audio/diff/frase_162_speaker_adriana_emotion_neutro.wav
       -
         - type: mushra
-          id: neutro_10
+          id: neutro_203
           name: Tarefa 1 - Avaliação de Naturalidade
-          content: Considerando a referência um exemplo de entoação natural, avalie a naturalidade de cada entoação abaixo.
+          content: Considerando a referência um exemplo de entonação natural, avalie a naturalidade de cada áudio abaixo.
           showWaveform: true
           enableLooping: false
-          reference: configs/resources/audio/mono_ref.wav
+          reference: configs/resources/audio/gt_ressintese/frase_203.wav
           randomize: true
           showConditionNames: false
           createAnchor35: false
           createAnchor70: false
           stimuli:
-              LowAnchor: configs/resources/audio/mono_c1.wav
-              Baseline: configs/resources/audio/mono_c2.wav
-              Proposed: configs/resources/audio/mono_c3.wav
+              LowAnchor: configs/resources/audio/vae/frase_203_speaker_adriana_emotion_neutro.wav
+              Baseline: configs/resources/audio/vaeflow/frase_203_speaker_adriana_emotion_neutro.wav
+              Proposed: configs/resources/audio/diff/frase_203_speaker_adriana_emotion_neutro.wav
       -
         - type: mushra
-          id: animado_1
+          id: animado_56
           name: Tarefa 1 - Avaliação de Naturalidade
-          content: Considerando a referência um exemplo de entoação natural, avalie a naturalidade de cada entoação abaixo.
+          content: Considerando a referência um exemplo de entonação natural, avalie a naturalidade de cada áudio abaixo.
           showWaveform: true
           enableLooping: false
-          reference: configs/resources/audio/mono_ref.wav
+          reference: configs/resources/audio/gt_ressintese/frase_56.wav
           randomize: true
           showConditionNames: false
           createAnchor35: false
           createAnchor70: false
           stimuli:
-              LowAnchor: configs/resources/audio/mono_c1.wav
-              Baseline: configs/resources/audio/mono_c2.wav
-              Proposed: configs/resources/audio/mono_c3.wav
+              LowAnchor: configs/resources/audio/vae/frase_56_speaker_adriana_emotion_animado.wav
+              Baseline: configs/resources/audio/vaeflow/frase_56_speaker_adriana_emotion_animado.wav
+              Proposed: configs/resources/audio/diff/frase_56_speaker_adriana_emotion_animado.wav
       -  
         - type: mushra
-          id: animado_2
+          id: animado_95
           name: Tarefa 1 - Avaliação de Naturalidade
-          content: Considerando a referência um exemplo de entoação natural, avalie a naturalidade de cada entoação abaixo.
+          content: Considerando a referência um exemplo de entonação natural, avalie a naturalidade de cada áudio abaixo.
           showWaveform: true
           enableLooping: false
-          reference: configs/resources/audio/mono_ref.wav
+          reference: configs/resources/audio/gt_ressintese/frase_95.wav
           randomize: true
           showConditionNames: false
           createAnchor35: false
           createAnchor70: false
           stimuli:
-              LowAnchor: configs/resources/audio/mono_c1.wav
-              Baseline: configs/resources/audio/mono_c2.wav
-              Proposed: configs/resources/audio/mono_c3.wav
+              LowAnchor: configs/resources/audio/vae/frase_95_speaker_adriana_emotion_animado.wav
+              Baseline: configs/resources/audio/vaeflow/frase_95_speaker_adriana_emotion_animado.wav
+              Proposed: configs/resources/audio/diff/frase_95_speaker_adriana_emotion_animado.wav
       -  
         - type: mushra
-          id: animado_3
+          id: animado_114
           name: Tarefa 1 - Avaliação de Naturalidade
-          content: Considerando a referência um exemplo de entoação natural, avalie a naturalidade de cada entoação abaixo.
+          content: Considerando a referência um exemplo de entonação natural, avalie a naturalidade de cada áudio abaixo.
           showWaveform: true
           enableLooping: false
-          reference: configs/resources/audio/mono_ref.wav
+          reference: configs/resources/audio/gt_ressintese/frase_114.wav
           randomize: true
           showConditionNames: false
           createAnchor35: false
           createAnchor70: false
           stimuli:
-              LowAnchor: configs/resources/audio/mono_c1.wav
-              Baseline: configs/resources/audio/mono_c2.wav
-              Proposed: configs/resources/audio/mono_c3.wav
+              LowAnchor: configs/resources/audio/vae/frase_114_speaker_adriana_emotion_animado.wav
+              Baseline: configs/resources/audio/vaeflow/frase_114_speaker_adriana_emotion_animado.wav
+              Proposed: configs/resources/audio/diff/frase_114_speaker_adriana_emotion_animado.wav
       -
         - type: mushra
-          id: animado_4
+          id: animado_147
           name: Tarefa 1 - Avaliação de Naturalidade
-          content: Considerando a referência um exemplo de entoação natural, avalie a naturalidade de cada entoação abaixo.
+          content: Considerando a referência um exemplo de entonação natural, avalie a naturalidade de cada áudio abaixo.
           showWaveform: true
           enableLooping: false
-          reference: configs/resources/audio/mono_ref.wav
+          reference: configs/resources/audio/gt_ressintese/frase_147.wav
           randomize: true
           showConditionNames: false
           createAnchor35: false
           createAnchor70: false
           stimuli:
-              LowAnchor: configs/resources/audio/mono_c1.wav
-              Baseline: configs/resources/audio/mono_c2.wav
-              Proposed: configs/resources/audio/mono_c3.wav
+              LowAnchor: configs/resources/audio/vae/frase_147_speaker_adriana_emotion_animado.wav
+              Baseline: configs/resources/audio/vaeflow/frase_147_speaker_adriana_emotion_animado.wav
+              Proposed: configs/resources/audio/diff/frase_147_speaker_adriana_emotion_animado.wav
       -
         - type: mushra
-          id: animado_5
+          id: animado_158
           name: Tarefa 1 - Avaliação de Naturalidade
-          content: Considerando a referência um exemplo de entoação natural, avalie a naturalidade de cada entoação abaixo.
+          content: Considerando a referência um exemplo de entonação natural, avalie a naturalidade de cada áudio abaixo.
           showWaveform: true
           enableLooping: false
-          reference: configs/resources/audio/mono_ref.wav
+          reference: configs/resources/audio/gt_ressintese/frase_158.wav
           randomize: true
           showConditionNames: false
           createAnchor35: false
           createAnchor70: false
           stimuli:
-              LowAnchor: configs/resources/audio/mono_c1.wav
-              Baseline: configs/resources/audio/mono_c2.wav
-              Proposed: configs/resources/audio/mono_c3.wav
+              LowAnchor: configs/resources/audio/vae/frase_158_speaker_adriana_emotion_animado.wav
+              Baseline: configs/resources/audio/vaeflow/frase_158_speaker_adriana_emotion_animado.wav
+              Proposed: configs/resources/audio/diff/frase_158_speaker_adriana_emotion_animado.wav
       - 
         - type: mushra
-          id: animado_6
+          id: animado_164
           name: Tarefa 1 - Avaliação de Naturalidade
-          content: Considerando a referência um exemplo de entoação natural, avalie a naturalidade de cada entoação abaixo.
+          content: Considerando a referência um exemplo de entonação natural, avalie a naturalidade de cada áudio abaixo.
           showWaveform: true
           enableLooping: false
-          reference: configs/resources/audio/mono_ref.wav
+          reference: configs/resources/audio/gt_ressintese/frase_164.wav
           randomize: true
           showConditionNames: false
           createAnchor35: false
           createAnchor70: false
           stimuli:
-              LowAnchor: configs/resources/audio/mono_c1.wav
-              Baseline: configs/resources/audio/mono_c2.wav
-              Proposed: configs/resources/audio/mono_c3.wav
+              LowAnchor: configs/resources/audio/vae/frase_164_speaker_adriana_emotion_animado.wav
+              Baseline: configs/resources/audio/vaeflow/frase_164_speaker_adriana_emotion_animado.wav
+              Proposed: configs/resources/audio/diff/frase_164_speaker_adriana_emotion_animado.wav
       - 
         - type: mushra
-          id: animado_7
+          id: animado_170
           name: Tarefa 1 - Avaliação de Naturalidade
-          content: Considerando a referência um exemplo de entoação natural, avalie a naturalidade de cada entoação abaixo.
+          content: Considerando a referência um exemplo de entonação natural, avalie a naturalidade de cada áudio abaixo.
           showWaveform: true
           enableLooping: false
-          reference: configs/resources/audio/mono_ref.wav
+          reference: configs/resources/audio/gt_ressintese/frase_170.wav
           randomize: true
           showConditionNames: false
           createAnchor35: false
           createAnchor70: false
           stimuli:
-              LowAnchor: configs/resources/audio/mono_c1.wav
-              Baseline: configs/resources/audio/mono_c2.wav
-              Proposed: configs/resources/audio/mono_c3.wav
+              LowAnchor: configs/resources/audio/vae/frase_170_speaker_adriana_emotion_animado.wav
+              Baseline: configs/resources/audio/vaeflow/frase_170_speaker_adriana_emotion_animado.wav
+              Proposed: configs/resources/audio/diff/frase_170_speaker_adriana_emotion_animado.wav
       -
         - type: mushra
-          id: animado_8
+          id: animado_191
           name: Tarefa 1 - Avaliação de Naturalidade
-          content: Considerando a referência um exemplo de entoação natural, avalie a naturalidade de cada entoação abaixo.
+          content: Considerando a referência um exemplo de entonação natural, avalie a naturalidade de cada áudio abaixo.
           showWaveform: true
           enableLooping: false
-          reference: configs/resources/audio/mono_ref.wav
+          reference: configs/resources/audio/gt_ressintese/frase_191.wav
           randomize: true
           showConditionNames: false
           createAnchor35: false
           createAnchor70: false
           stimuli:
-              LowAnchor: configs/resources/audio/mono_c1.wav
-              Baseline: configs/resources/audio/mono_c2.wav
-              Proposed: configs/resources/audio/mono_c3.wav
+              LowAnchor: configs/resources/audio/vae/frase_191_speaker_adriana_emotion_animado.wav
+              Baseline: configs/resources/audio/vaeflow/frase_191_speaker_adriana_emotion_animado.wav
+              Proposed: configs/resources/audio/diff/frase_191_speaker_adriana_emotion_animado.wav
       -
         - type: mushra
-          id: animado_9
+          id: animado_198
           name: Tarefa 1 - Avaliação de Naturalidade
-          content: Considerando a referência um exemplo de entoação natural, avalie a naturalidade de cada entoação abaixo.
+          content: Considerando a referência um exemplo de entonação natural, avalie a naturalidade de cada áudio abaixo.
           showWaveform: true
           enableLooping: false
-          reference: configs/resources/audio/mono_ref.wav
+          reference: configs/resources/audio/gt_ressintese/frase_198.wav
           randomize: true
           showConditionNames: false
           createAnchor35: false
           createAnchor70: false
           stimuli:
-              LowAnchor: configs/resources/audio/mono_c1.wav
-              Baseline: configs/resources/audio/mono_c2.wav
-              Proposed: configs/resources/audio/mono_c3.wav
+              LowAnchor: configs/resources/audio/vae/frase_198_speaker_adriana_emotion_animado.wav
+              Baseline: configs/resources/audio/vaeflow/frase_198_speaker_adriana_emotion_animado.wav
+              Proposed: configs/resources/audio/diff/frase_198_speaker_adriana_emotion_animado.wav
       -
         - type: mushra
-          id: animado_10
+          id: animado_212
           name: Tarefa 1 - Avaliação de Naturalidade
-          content: Considerando a referência um exemplo de entoação natural, avalie a naturalidade de cada entoação abaixo.
+          content: Considerando a referência um exemplo de entonação natural, avalie a naturalidade de cada áudio abaixo.
           showWaveform: true
           enableLooping: false
-          reference: configs/resources/audio/mono_ref.wav
+          reference: configs/resources/audio/gt_ressintese/frase_212.wav
           randomize: true
           showConditionNames: false
           createAnchor35: false
           createAnchor70: false
           stimuli:
-              LowAnchor: configs/resources/audio/mono_c1.wav
-              Baseline: configs/resources/audio/mono_c2.wav
-              Proposed: configs/resources/audio/mono_c3.wav
+              LowAnchor: configs/resources/audio/vae/frase_212_speaker_adriana_emotion_animado.wav
+              Baseline: configs/resources/audio/vaeflow/frase_212_speaker_adriana_emotion_animado.wav
+              Proposed: configs/resources/audio/diff/frase_212_speaker_adriana_emotion_animado.wav
       -
         - type: mushra
-          id: acolhedor_1
+          id: acolhedor_34
           name: Tarefa 1 - Avaliação de Naturalidade
-          content: Considerando a referência um exemplo de entoação natural, avalie a naturalidade de cada entoação abaixo.
+          content: Considerando a referência um exemplo de entonação natural, avalie a naturalidade de cada áudio abaixo.
           showWaveform: true
           enableLooping: false
-          reference: configs/resources/audio/mono_ref.wav
+          reference: configs/resources/audio/gt_ressintese/frase_34.wav
           randomize: true
           showConditionNames: false
           createAnchor35: false
           createAnchor70: false
           stimuli:
-              LowAnchor: configs/resources/audio/mono_c1.wav
-              Baseline: configs/resources/audio/mono_c2.wav
-              Proposed: configs/resources/audio/mono_c3.wav
+              LowAnchor: configs/resources/audio/vae/frase_34_speaker_adriana_emotion_acolhedor.wav
+              Baseline: configs/resources/audio/vaeflow/frase_34_speaker_adriana_emotion_acolhedor.wav
+              Proposed: configs/resources/audio/diff/frase_34_speaker_adriana_emotion_acolhedor.wav
       -
         - type: mushra
-          id: acolhedor_2
+          id: acolhedor_40
           name: Tarefa 1 - Avaliação de Naturalidade
-          content: Considerando a referência um exemplo de entoação natural, avalie a naturalidade de cada entoação abaixo.
+          content: Considerando a referência um exemplo de entonação natural, avalie a naturalidade de cada áudio abaixo.
           showWaveform: true
           enableLooping: false
-          reference: configs/resources/audio/mono_ref.wav
+          reference: configs/resources/audio/gt_ressintese/frase_40.wav
           randomize: true
           showConditionNames: false
           createAnchor35: false
           createAnchor70: false
           stimuli:
-              LowAnchor: configs/resources/audio/mono_c1.wav
-              Baseline: configs/resources/audio/mono_c2.wav
-              Proposed: configs/resources/audio/mono_c3.wav
+              LowAnchor: configs/resources/audio/vae/frase_40_speaker_adriana_emotion_acolhedor.wav
+              Baseline: configs/resources/audio/vaeflow/frase_40_speaker_adriana_emotion_acolhedor.wav
+              Proposed: configs/resources/audio/diff/frase_40_speaker_adriana_emotion_acolhedor.wav
       - 
         - type: mushra
-          id: acolhedor_3
+          id: acolhedor_49
           name: Tarefa 1 - Avaliação de Naturalidade
-          content: Considerando a referência um exemplo de entoação natural, avalie a naturalidade de cada entoação abaixo.
+          content: Considerando a referência um exemplo de entonação natural, avalie a naturalidade de cada áudio abaixo.
           showWaveform: true
           enableLooping: false
-          reference: configs/resources/audio/mono_ref.wav
+          reference: configs/resources/audio/gt_ressintese/frase_49.wav
           randomize: true
           showConditionNames: false
           createAnchor35: false
           createAnchor70: false
           stimuli:
-              LowAnchor: configs/resources/audio/mono_c1.wav
-              Baseline: configs/resources/audio/mono_c2.wav
-              Proposed: configs/resources/audio/mono_c3.wav
+              LowAnchor: configs/resources/audio/vae/frase_49_speaker_adriana_emotion_acolhedor.wav
+              Baseline: configs/resources/audio/vaeflow/frase_49_speaker_adriana_emotion_acolhedor.wav
+              Proposed: configs/resources/audio/diff/frase_49_speaker_adriana_emotion_acolhedor.wav
       -
         - type: mushra
-          id: acolhedor_4
+          id: acolhedor_68
           name: Tarefa 1 - Avaliação de Naturalidade
-          content: Considerando a referência um exemplo de entoação natural, avalie a naturalidade de cada entoação abaixo.
+          content: Considerando a referência um exemplo de entonação natural, avalie a naturalidade de cada áudio abaixo.
           showWaveform: true
           enableLooping: false
-          reference: configs/resources/audio/mono_ref.wav
+          reference: configs/resources/audio/gt_ressintese/frase_68.wav
           randomize: true
           showConditionNames: false
           createAnchor35: false
           createAnchor70: false
           stimuli:
-              LowAnchor: configs/resources/audio/mono_c1.wav
-              Baseline: configs/resources/audio/mono_c2.wav
-              Proposed: configs/resources/audio/mono_c3.wav
+              LowAnchor: configs/resources/audio/vae/frase_68_speaker_adriana_emotion_acolhedor.wav
+              Baseline: configs/resources/audio/vaeflow/frase_68_speaker_adriana_emotion_acolhedor.wav
+              Proposed: configs/resources/audio/diff/frase_68_speaker_adriana_emotion_acolhedor.wav
       -
         - type: mushra
-          id: acolhedor_5
+          id: acolhedor_70
           name: Tarefa 1 - Avaliação de Naturalidade
-          content: Considerando a referência um exemplo de entoação natural, avalie a naturalidade de cada entoação abaixo.
+          content: Considerando a referência um exemplo de entonação natural, avalie a naturalidade de cada áudio abaixo.
           showWaveform: true
           enableLooping: false
-          reference: configs/resources/audio/mono_ref.wav
+          reference: configs/resources/audio/gt_ressintese/frase_70.wav
           randomize: true
           showConditionNames: false
           createAnchor35: false
           createAnchor70: false
           stimuli:
-              LowAnchor: configs/resources/audio/mono_c1.wav
-              Baseline: configs/resources/audio/mono_c2.wav
-              Proposed: configs/resources/audio/mono_c3.wav
+              LowAnchor: configs/resources/audio/vae/frase_70_speaker_adriana_emotion_acolhedor.wav
+              Baseline: configs/resources/audio/vaeflow/frase_70_speaker_adriana_emotion_acolhedor.wav
+              Proposed: configs/resources/audio/diff/frase_70_speaker_adriana_emotion_acolhedor.wav
       -
         - type: mushra
-          id: acolhedor_6
+          id: acolhedor_74
           name: Tarefa 1 - Avaliação de Naturalidade
-          content: Considerando a referência um exemplo de entoação natural, avalie a naturalidade de cada entoação abaixo.
+          content: Considerando a referência um exemplo de entonação natural, avalie a naturalidade de cada áudio abaixo.
           showWaveform: true
           enableLooping: false
-          reference: configs/resources/audio/mono_ref.wav
+          reference: configs/resources/audio/gt_ressintese/frase_74.wav
           randomize: true
           showConditionNames: false
           createAnchor35: false
           createAnchor70: false
           stimuli:
-              LowAnchor: configs/resources/audio/mono_c1.wav
-              Baseline: configs/resources/audio/mono_c2.wav
-              Proposed: configs/resources/audio/mono_c3.wav
+              LowAnchor: configs/resources/audio/vae/frase_74_speaker_adriana_emotion_acolhedor.wav
+              Baseline: configs/resources/audio/vaeflow/frase_74_speaker_adriana_emotion_acolhedor.wav
+              Proposed: configs/resources/audio/diff/frase_74_speaker_adriana_emotion_acolhedor.wav
       - 
         - type: mushra
-          id: acolhedor_7
+          id: acolhedor_101
           name: Tarefa 1 - Avaliação de Naturalidade
-          content: Considerando a referência um exemplo de entoação natural, avalie a naturalidade de cada entoação abaixo.
+          content: Considerando a referência um exemplo de entonação natural, avalie a naturalidade de cada áudio abaixo.
           showWaveform: true
           enableLooping: false
-          reference: configs/resources/audio/mono_ref.wav
+          reference: configs/resources/audio/gt_ressintese/frase_101.wav
           randomize: true
           showConditionNames: false
           createAnchor35: false
           createAnchor70: false
           stimuli:
-              LowAnchor: configs/resources/audio/mono_c1.wav
-              Baseline: configs/resources/audio/mono_c2.wav
-              Proposed: configs/resources/audio/mono_c3.wav
+              LowAnchor: configs/resources/audio/vae/frase_101_speaker_adriana_emotion_acolhedor.wav
+              Baseline: configs/resources/audio/vaeflow/frase_101_speaker_adriana_emotion_acolhedor.wav
+              Proposed: configs/resources/audio/diff/frase_101_speaker_adriana_emotion_acolhedor.wav
       -
         - type: mushra
-          id: acolhedor_8
+          id: acolhedor_141
           name: Tarefa 1 - Avaliação de Naturalidade
-          content: Considerando a referência um exemplo de entoação natural, avalie a naturalidade de cada entoação abaixo.
+          content: Considerando a referência um exemplo de entonação natural, avalie a naturalidade de cada áudio abaixo.
           showWaveform: true
           enableLooping: false
-          reference: configs/resources/audio/mono_ref.wav
+          reference: configs/resources/audio/gt_ressintese/frase_141.wav
           randomize: true
           showConditionNames: false
           createAnchor35: false
           createAnchor70: false
           stimuli:
-              LowAnchor: configs/resources/audio/mono_c1.wav
-              Baseline: configs/resources/audio/mono_c2.wav
-              Proposed: configs/resources/audio/mono_c3.wav
+              LowAnchor: configs/resources/audio/vae/frase_141_speaker_adriana_emotion_acolhedor.wav
+              Baseline: configs/resources/audio/vaeflow/frase_141_speaker_adriana_emotion_acolhedor.wav
+              Proposed: configs/resources/audio/diff/frase_141_speaker_adriana_emotion_acolhedor.wav
       -
         - type: mushra
-          id: acolhedor_9
+          id: acolhedor_146
           name: Tarefa 1 - Avaliação de Naturalidade
-          content: Considerando a referência um exemplo de entoação natural, avalie a naturalidade de cada entoação abaixo.
+          content: Considerando a referência um exemplo de entonação natural, avalie a naturalidade de cada áudio abaixo.
           showWaveform: true
           enableLooping: false
-          reference: configs/resources/audio/mono_ref.wav
+          reference: configs/resources/audio/gt_ressintese/frase_146.wav
           randomize: true
           showConditionNames: false
           createAnchor35: false
           createAnchor70: false
           stimuli:
-              LowAnchor: configs/resources/audio/mono_c1.wav
-              Baseline: configs/resources/audio/mono_c2.wav
-              Proposed: configs/resources/audio/mono_c3.wav
+              LowAnchor: configs/resources/audio/vae/frase_146_speaker_adriana_emotion_acolhedor.wav
+              Baseline: configs/resources/audio/vaeflow/frase_146_speaker_adriana_emotion_acolhedor.wav
+              Proposed: configs/resources/audio/diff/frase_146_speaker_adriana_emotion_acolhedor.wav
       -
         - type: mushra
-          id: acolhedor_10
+          id: acolhedor_217
           name: Tarefa 1 - Avaliação de Naturalidade
-          content: Considerando a referência um exemplo de entoação natural, avalie a naturalidade de cada entoação abaixo.
+          content: Considerando a referência um exemplo de entonação natural, avalie a naturalidade de cada áudio abaixo.
           showWaveform: true
           enableLooping: false
-          reference: configs/resources/audio/mono_ref.wav
+          reference: configs/resources/audio/gt_ressintese/frase_217.wav
           randomize: true
           showConditionNames: false
           createAnchor35: false
           createAnchor70: false
           stimuli:
-              LowAnchor: configs/resources/audio/mono_c1.wav
-              Baseline: configs/resources/audio/mono_c2.wav
-              Proposed: configs/resources/audio/mono_c3.wav
+              LowAnchor: configs/resources/audio/vae/frase_217_speaker_adriana_emotion_acolhedor.wav
+              Baseline: configs/resources/audio/vaeflow/frase_217_speaker_adriana_emotion_acolhedor.wav
+              Proposed: configs/resources/audio/diff/frase_217_speaker_adriana_emotion_acolhedor.wav
       -
         - type: mushra
-          id: rispido_1
+          id: rispido_20
           name: Tarefa 1 - Avaliação de Naturalidade
-          content: Considerando a referência um exemplo de entoação natural, avalie a naturalidade de cada entoação abaixo.
+          content: Considerando a referência um exemplo de entonação natural, avalie a naturalidade de cada áudio abaixo.
           showWaveform: true
           enableLooping: false
-          reference: configs/resources/audio/mono_ref.wav
+          reference: configs/resources/audio/gt_ressintese/frase_20.wav
           randomize: true
           showConditionNames: false
           createAnchor35: false
           createAnchor70: false
           stimuli:
-              LowAnchor: configs/resources/audio/mono_c1.wav
-              Baseline: configs/resources/audio/mono_c2.wav
-              Proposed: configs/resources/audio/mono_c3.wav
+              LowAnchor: configs/resources/audio/vae/frase_20_speaker_adriana_emotion_rispido.wav
+              Baseline: configs/resources/audio/vaeflow/frase_20_speaker_adriana_emotion_rispido.wav
+              Proposed: configs/resources/audio/diff/frase_20_speaker_adriana_emotion_rispido.wav
       -    
         - type: mushra
-          id: rispido_2
+          id: rispido_26
           name: Tarefa 1 - Avaliação de Naturalidade
-          content: Considerando a referência um exemplo de entoação natural, avalie a naturalidade de cada entoação abaixo.
+          content: Considerando a referência um exemplo de entonação natural, avalie a naturalidade de cada áudio abaixo.
           showWaveform: true
           enableLooping: false
-          reference: configs/resources/audio/mono_ref.wav
+          reference: configs/resources/audio/gt_ressintese/frase_26.wav
           randomize: true
           showConditionNames: false
           createAnchor35: false
           createAnchor70: false
           stimuli:
-              LowAnchor: configs/resources/audio/mono_c1.wav
-              Baseline: configs/resources/audio/mono_c2.wav
-              Proposed: configs/resources/audio/mono_c3.wav
+              LowAnchor: configs/resources/audio/vae/frase_26_speaker_adriana_emotion_rispido.wav
+              Baseline: configs/resources/audio/vaeflow/frase_26_speaker_adriana_emotion_rispido.wav
+              Proposed: configs/resources/audio/diff/frase_26_speaker_adriana_emotion_rispido.wav
       -  
         - type: mushra
-          id: rispido_3
+          id: rispido_41
           name: Tarefa 1 - Avaliação de Naturalidade
-          content: Considerando a referência um exemplo de entoação natural, avalie a naturalidade de cada entoação abaixo.
+          content: Considerando a referência um exemplo de entonação natural, avalie a naturalidade de cada áudio abaixo.
           showWaveform: true
           enableLooping: false
-          reference: configs/resources/audio/mono_ref.wav
+          reference: configs/resources/audio/gt_ressintese/frase_41.wav
           randomize: true
           showConditionNames: false
           createAnchor35: false
           createAnchor70: false
           stimuli:
-              LowAnchor: configs/resources/audio/mono_c1.wav
-              Baseline: configs/resources/audio/mono_c2.wav
-              Proposed: configs/resources/audio/mono_c3.wav
+              LowAnchor: configs/resources/audio/vae/frase_41_speaker_adriana_emotion_rispido.wav
+              Baseline: configs/resources/audio/vaeflow/frase_41_speaker_adriana_emotion_rispido.wav
+              Proposed: configs/resources/audio/diff/frase_41_speaker_adriana_emotion_rispido.wav
       -
         - type: mushra
-          id: rispido_4
+          id: rispido_48
           name: Tarefa 1 - Avaliação de Naturalidade
-          content: Considerando a referência um exemplo de entoação natural, avalie a naturalidade de cada entoação abaixo.
+          content: Considerando a referência um exemplo de entonação natural, avalie a naturalidade de cada áudio abaixo.
           showWaveform: true
           enableLooping: false
-          reference: configs/resources/audio/mono_ref.wav
+          reference: configs/resources/audio/gt_ressintese/frase_48.wav
           randomize: true
           showConditionNames: false
           createAnchor35: false
           createAnchor70: false
           stimuli:
-              LowAnchor: configs/resources/audio/mono_c1.wav
-              Baseline: configs/resources/audio/mono_c2.wav
-              Proposed: configs/resources/audio/mono_c3.wav
+              LowAnchor: configs/resources/audio/vae/frase_48_speaker_adriana_emotion_rispido.wav
+              Baseline: configs/resources/audio/vaeflow/frase_48_speaker_adriana_emotion_rispido.wav
+              Proposed: configs/resources/audio/diff/frase_48_speaker_adriana_emotion_rispido.wav
       -
         - type: mushra
-          id: rispido_5
+          id: rispido_55
           name: Tarefa 1 - Avaliação de Naturalidade
-          content: Considerando a referência um exemplo de entoação natural, avalie a naturalidade de cada entoação abaixo.
+          content: Considerando a referência um exemplo de entonação natural, avalie a naturalidade de cada áudio abaixo.
           showWaveform: true
           enableLooping: false
-          reference: configs/resources/audio/mono_ref.wav
+          reference: configs/resources/audio/gt_ressintese/frase_55.wav
           randomize: true
           showConditionNames: false
           createAnchor35: false
           createAnchor70: false
           stimuli:
-              LowAnchor: configs/resources/audio/mono_c1.wav
-              Baseline: configs/resources/audio/mono_c2.wav
-              Proposed: configs/resources/audio/mono_c3.wav
+              LowAnchor: configs/resources/audio/vae/frase_55_speaker_adriana_emotion_rispido.wav
+              Baseline: configs/resources/audio/vaeflow/frase_55_speaker_adriana_emotion_rispido.wav
+              Proposed: configs/resources/audio/diff/frase_55_speaker_adriana_emotion_rispido.wav
       -
         - type: mushra
-          id: rispido_6
+          id: rispido_93
           name: Tarefa 1 - Avaliação de Naturalidade
-          content: Considerando a referência um exemplo de entoação natural, avalie a naturalidade de cada entoação abaixo.
+          content: Considerando a referência um exemplo de entonação natural, avalie a naturalidade de cada áudio abaixo.
           showWaveform: true
           enableLooping: false
-          reference: configs/resources/audio/mono_ref.wav
+          reference: configs/resources/audio/gt_ressintese/frase_93.wav
           randomize: true
           showConditionNames: false
           createAnchor35: false
           createAnchor70: false
           stimuli:
-              LowAnchor: configs/resources/audio/mono_c1.wav
-              Baseline: configs/resources/audio/mono_c2.wav
-              Proposed: configs/resources/audio/mono_c3.wav
+              LowAnchor: configs/resources/audio/vae/frase_93_speaker_adriana_emotion_rispido.wav
+              BBaseline: configs/resources/audio/vaeflow/frase_93_speaker_adriana_emotion_rispido.wav
+              Proposed: configs/resources/audio/diff/frase_93_speaker_adriana_emotion_rispido.wav
       -  
         - type: mushra
-          id: rispido_7
+          id: rispido_168
           name: Tarefa 1 - Avaliação de Naturalidade
-          content: Considerando a referência um exemplo de entoação natural, avalie a naturalidade de cada entoação abaixo.
+          content: Considerando a referência um exemplo de entonação natural, avalie a naturalidade de cada áudio abaixo.
           showWaveform: true
           enableLooping: false
-          reference: configs/resources/audio/mono_ref.wav
+          reference: configs/resources/audio/gt_ressintese/frase_168.wav
           randomize: true
           showConditionNames: false
           createAnchor35: false
           createAnchor70: false
           stimuli:
-              LowAnchor: configs/resources/audio/mono_c1.wav
-              Baseline: configs/resources/audio/mono_c2.wav
-              Proposed: configs/resources/audio/mono_c3.wav
+              LowAnchor: configs/resources/audio/vae/frase_168_speaker_adriana_emotion_rispido.wav
+              Baseline: configs/resources/audio/vaeflow/frase_168_speaker_adriana_emotion_rispido.wav
+              Proposed: configs/resources/audio/diff/frase_168_speaker_adriana_emotion_rispido.wav
       -
         - type: mushra
-          id: rispido_8
+          id: rispido_177
           name: Tarefa 1 - Avaliação de Naturalidade
-          content: Considerando a referência um exemplo de entoação natural, avalie a naturalidade de cada entoação abaixo.
+          content: Considerando a referência um exemplo de entonação natural, avalie a naturalidade de cada áudio abaixo.
           showWaveform: true
           enableLooping: false
-          reference: configs/resources/audio/mono_ref.wav
+          reference: configs/resources/audio/gt_ressintese/frase_177.wav
           randomize: true
           showConditionNames: false
           createAnchor35: false
           createAnchor70: false
           stimuli:
-              LowAnchor: configs/resources/audio/mono_c1.wav
-              Baseline: configs/resources/audio/mono_c2.wav
-              Proposed: configs/resources/audio/mono_c3.wav
+              LowAnchor: configs/resources/audio/vae/frase_177_speaker_adriana_emotion_rispido.wav
+              Baseline: configs/resources/audio/vaeflow/frase_177_speaker_adriana_emotion_rispido.wav
+              Proposed: configs/resources/audio/diff/frase_177_speaker_adriana_emotion_rispido.wav
       -
         - type: mushra
-          id: rispido_9
+          id: rispido_182
           name: Tarefa 1 - Avaliação de Naturalidade
-          content: Considerando a referência um exemplo de entoação natural, avalie a naturalidade de cada entoação abaixo.
+          content: Considerando a referência um exemplo de entonação natural, avalie a naturalidade de cada áudio abaixo.
           showWaveform: true
           enableLooping: false
-          reference: configs/resources/audio/mono_ref.wav
+          reference: configs/resources/audio/gt_ressintese/frase_182.wav
           randomize: true
           showConditionNames: false
           createAnchor35: false
           createAnchor70: false
           stimuli:
-              LowAnchor: configs/resources/audio/mono_c1.wav
-              Baseline: configs/resources/audio/mono_c2.wav
-              Proposed: configs/resources/audio/mono_c3.wav
+              LowAnchor: configs/resources/audio/vae/frase_182_speaker_adriana_emotion_rispido.wav
+              Baseline: configs/resources/audio/vaeflow/frase_182_speaker_adriana_emotion_rispido.wav
+              Proposed: configs/resources/audio/diff/frase_182_speaker_adriana_emotion_rispido.wav
       -
         - type: mushra
-          id: rispido_10
+          id: rispido_195
           name: Tarefa 1 - Avaliação de Naturalidade
-          content: Considerando a referência um exemplo de entoação natural, avalie a naturalidade de cada entoação abaixo.
+          content: Considerando a referência um exemplo de entonação natural, avalie a naturalidade de cada áudio abaixo.
           showWaveform: true
           enableLooping: false
-          reference: configs/resources/audio/mono_ref.wav
+          reference: configs/resources/audio/gt_ressintese/frase_195.wav
           randomize: true
           showConditionNames: false
           createAnchor35: false
           createAnchor70: false
           stimuli:
-              LowAnchor: configs/resources/audio/mono_c1.wav
-              Baseline: configs/resources/audio/mono_c2.wav
-              Proposed: configs/resources/audio/mono_c3.wav
+              LowAnchor: configs/resources/audio/vae/frase_195_speaker_adriana_emotion_rispido.wav
+              Baseline: configs/resources/audio/vaeflow/frase_195_speaker_adriana_emotion_rispido.wav
+              Proposed: configs/resources/audio/diff/frase_195_speaker_adriana_emotion_rispido.wav
 
     - type: generic
       id: instruções_pairedcomparison
       name: Tarefa 2 - Comparação de Estilo
-      content: <p>Nessa tarefa, para cada frase você receberá uma referência e dois áudios (A e B).</p><p>A sua tarefa é a de identificar qual dos dois áudios (A ou B) tem o ESTILO MAIS PARECIDO com a da referência.</p><p>Por estilo, entende-se caracteísticas do tipo entonação, acentos, etc.</p><p>Fatores que possam indicar estilo são o tom de fala (como ele aumenta e diminui ao longo da fala), o acento colocado em cada palavra ou sílaba, a velocidade de fala (e como ela muda) e as pausas.</p><p> Animado, Acolhedor, Neutro e Ríspido são alguns exemplos de estilo de fala.</p><p>Atente-se ao fato de que o texto falado dos áudios A e B não necessariamente corresponde ao da referência. Deve-se apenas identificar qual ESTILO mais se parece com a referência, independente do texto.</p><p>Por exemplo, caso você identifique a referência como tendo um estilo "animado", por mais que o texto falado dos áudios A e B sejam diferentes da referência, aquele que mais se aproximar do estilo "animado" deve ser o escolhido.</p><p>Existe a opção "Igualmente Próximos" caso julgue que o estilo de A e B são igualmente próximos do da referência.</p>
+      content: <p>Nessa tarefa, para cada frase você receberá uma referência e dois áudios (A e B).</p><p>A sua tarefa é a de identificar qual dos dois áudios (A ou B) tem o ESTILO DE LOCUÇÃO MAIS PARECIDO com a da referência.</p><p>Por estilo de locução, entende-se características do tipo entonação, acentos, etc.</p><p>Fatores que possam indicar estilo são; o tom de fala (como ele aumenta e diminui ao longo da fala), o acento colocado em cada palavra ou sílaba, a velocidade de fala (e como ela muda) e as pausas.</p><p> Animado, Acolhedor, Neutro e Ríspido são alguns exemplos de estilo de fala.</p><p>Atente-se ao fato de que o texto falado dos áudios A e B não necessariamente corresponde ao da referência.</p><p>Existe a opção "Igualmente Próximos" caso julgue que o estilo de A e B são igualmente próximos do da referência.</p>
     
     -
       - random   
@@ -679,242 +679,388 @@ pages:
         - type: paired_comparison
           id: paralelo_1
           name: Tarefa 2 - Comparação de Estilo
-          content: Entre os áudios A e B, qual estilo mais se aproxima do estilo da referência?
+          content: Entre os áudios A e B, qual estilo de locução mais se aproxima do da referência?
           unforced: Igualmente Próximos
           showWaveform: false
           enableLooping: false
-          reference: configs/resources/audio/mono_ref.wav
+          reference: configs/resources/audio/gt_ressintese/frase_50.wav
           stimuli:
-                  LowAnchor: configs/resources/audio/mono_c1.wav
-                  Baseline: configs/resources/audio/mono_c2.wav
+                  LowAnchor: configs/resources/audio/vaeflow/frase_50_speaker_adriana_emotion_acolhedor.wav
+                  Baseline: configs/resources/audio/diff/frase_50_speaker_adriana_emotion_acolhedor.wav
       -  
         - type: paired_comparison
           id: paralelo_2
           name: Tarefa 2 - Comparação de Estilo
-          content: Entre os áudios A e B, qual estilo mais se aproxima do estilo da referência?
+          content: Entre os áudios A e B, qual estilo de locução mais se aproxima do da referência?
           unforced: Igualmente Próximos
           showWaveform: false
           enableLooping: false
-          reference: configs/resources/audio/mono_ref.wav
+          reference: configs/resources/audio/gt_ressintese/frase_57.wav
           stimuli:
-                  LowAnchor: configs/resources/audio/mono_c1.wav
-                  Baseline: configs/resources/audio/mono_c2.wav
+                  LowAnchor: configs/resources/audio/vaeflow/frase_57_speaker_adriana_emotion_acolhedor.wav
+                  Baseline: configs/resources/audio/diff/frase_57_speaker_adriana_emotion_acolhedor.wav
       -    
         - type: paired_comparison
           id: paralelo_3
           name: Tarefa 2 - Comparação de Estilo
-          content: Entre os áudios A e B, qual estilo mais se aproxima do estilo da referência?
+          content: Entre os áudios A e B, qual estilo de locução mais se aproxima do da referência?
           unforced: Igualmente Próximos
           showWaveform: false
           enableLooping: false
-          reference: configs/resources/audio/mono_ref.wav
+          reference: configs/resources/audio/gt_ressintese/frase_62.wav
           stimuli:
-                  LowAnchor: configs/resources/audio/mono_c1.wav
-                  Baseline: configs/resources/audio/mono_c2.wav
+                  LowAnchor: configs/resources/audio/vaeflow/frase_62_speaker_adriana_emotion_acolhedor.wav
+                  Baseline: configs/resources/audio/diff/frase_62_speaker_adriana_emotion_acolhedor.wav
       -  
         - type: paired_comparison
           id: paralelo_4
           name: Tarefa 2 - Comparação de Estilo
-          content: Entre os áudios A e B, qual estilo mais se aproxima do estilo da referência?
+          content: Entre os áudios A e B, qual estilo de locução mais se aproxima do da referência?
           unforced: Igualmente Próximos
           showWaveform: false
           enableLooping: false
-          reference: configs/resources/audio/mono_ref.wav
+          reference: configs/resources/audio/gt_ressintese/frase_68.wav
           stimuli:
-                  LowAnchor: configs/resources/audio/mono_c1.wav
-                  Baseline: configs/resources/audio/mono_c2.wav
+                  LowAnchor: configs/resources/audio/vaeflow/frase_68_speaker_adriana_emotion_acolhedor.wav
+                  Baseline: configs/resources/audio/diff/frase_68_speaker_adriana_emotion_acolhedor.wav
       -
         - type: paired_comparison
           id: paralelo_5
           name: Tarefa 2 - Comparação de Estilo
-          content: Entre os áudios A e B, qual estilo mais se aproxima do estilo da referência?
+          content: Entre os áudios A e B, qual estilo de locução mais se aproxima do da referência?
           unforced: Igualmente Próximos
           showWaveform: false
           enableLooping: false
-          reference: configs/resources/audio/mono_ref.wav
+          reference: configs/resources/audio/gt_ressintese/frase_80.wav
           stimuli:
-                  LowAnchor: configs/resources/audio/mono_c1.wav
-                  Baseline: configs/resources/audio/mono_c2.wav
+                  LowAnchor: configs/resources/audio/vaeflow/frase_80_speaker_adriana_emotion_animado.wav
+                  Baseline: configs/resources/audio/diff/frase_80_speaker_adriana_emotion_animado.wav
       -
         - type: paired_comparison
           id: paralelo_6
           name: Tarefa 2 - Comparação de Estilo
-          content: Entre os áudios A e B, qual estilo mais se aproxima do estilo da referência?
+          content: Entre os áudios A e B, qual estilo de locução mais se aproxima do da referência?
           unforced: Igualmente Próximos
           showWaveform: false
           enableLooping: false
-          reference: configs/resources/audio/mono_ref.wav
+          reference: configs/resources/audio/gt_ressintese/frase_94.wav
           stimuli:
-                  LowAnchor: configs/resources/audio/mono_c1.wav
-                  Baseline: configs/resources/audio/mono_c2.wav
+                  LowAnchor: configs/resources/audio/vaeflow/frase_94_speaker_adriana_emotion_animado.wav
+                  Baseline: configs/resources/audio/diff/frase_94_speaker_adriana_emotion_animado.wav
       -  
         - type: paired_comparison
           id: paralelo_7
           name: Tarefa 2 - Comparação de Estilo
-          content: Entre os áudios A e B, qual estilo mais se aproxima do estilo da referência?
+          content: Entre os áudios A e B, qual estilo de locução mais se aproxima do da referência?
           unforced: Igualmente Próximos
           showWaveform: false
           enableLooping: false
-          reference: configs/resources/audio/mono_ref.wav
+          reference: configs/resources/audio/gt_ressintese/frase_95.wav
           stimuli:
-                  LowAnchor: configs/resources/audio/mono_c1.wav
-                  Baseline: configs/resources/audio/mono_c2.wav
+                  LowAnchor: configs/resources/audio/vaeflow/frase_95_speaker_adriana_emotion_animado.wav
+                  Baseline: configs/resources/audio/diff/frase_95_speaker_adriana_emotion_animado.wav
       -    
         - type: paired_comparison
           id: paralelo_8
           name: Tarefa 2 - Comparação de Estilo
-          content: Entre os áudios A e B, qual estilo mais se aproxima do estilo da referência?
+          content: Entre os áudios A e B, qual estilo de locução mais se aproxima do da referência?
           unforced: Igualmente Próximos
           showWaveform: false
           enableLooping: false
-          reference: configs/resources/audio/mono_ref.wav
+          reference: configs/resources/audio/gt_ressintese/frase_98.wav
           stimuli:
-                  LowAnchor: configs/resources/audio/mono_c1.wav
-                  Baseline: configs/resources/audio/mono_c2.wav
+                  LowAnchor: configs/resources/audio/vaeflow/frase_98_speaker_adriana_emotion_animado.wav
+                  Baseline: configs/resources/audio/diff/frase_98_speaker_adriana_emotion_animado.wav
       -  
         - type: paired_comparison
           id: paralelo_9
           name: Tarefa 2 - Comparação de Estilo
-          content: Entre os áudios A e B, qual estilo mais se aproxima do estilo da referência?
+          content: Entre os áudios A e B, qual estilo de locução mais se aproxima do da referência?
           unforced: Igualmente Próximos
           showWaveform: false
           enableLooping: false
-          reference: configs/resources/audio/mono_ref.wav
+          reference: configs/resources/audio/gt_ressintese/frase_103.wav
           stimuli:
-                  LowAnchor: configs/resources/audio/mono_c1.wav
-                  Baseline: configs/resources/audio/mono_c2.wav
+                  LowAnchor: configs/resources/audio/vaeflow/frase_103_speaker_adriana_emotion_rispido.wav
+                  Baseline: configs/resources/audio/diff/frase_103_speaker_adriana_emotion_rispido.wav
       -
         - type: paired_comparison
           id: paralelo_10
           name: Tarefa 2 - Comparação de Estilo
-          content: Entre os áudios A e B, qual estilo mais se aproxima do estilo da referência?
+          content: Entre os áudios A e B, qual estilo de locução mais se aproxima do da referência?
           unforced: Igualmente Próximos
           showWaveform: false
           enableLooping: false
-          reference: configs/resources/audio/mono_ref.wav
+          reference: configs/resources/audio/gt_ressintese/frase_119.wav
           stimuli:
-                  LowAnchor: configs/resources/audio/mono_c1.wav
-                  Baseline: configs/resources/audio/mono_c2.wav
+                  LowAnchor: configs/resources/audio/vaeflow/frase_119_speaker_adriana_emotion_rispido.wav
+                  Baseline: configs/resources/audio/diff/frase_119_speaker_adriana_emotion_rispido.wav
+      -             
+        - type: paired_comparison
+            id: paralelo_11
+            name: Tarefa 2 - Comparação de Estilo
+            content: Entre os áudios A e B, qual estilo de locução mais se aproxima do da referência?
+            unforced: Igualmente Próximos
+            showWaveform: false
+            enableLooping: false
+            reference: configs/resources/audio/gt_ressintese/frase_120.wav
+            stimuli:
+                  LowAnchor: configs/resources/audio/vaeflow/frase_120_speaker_adriana_emotion_rispido.wav
+                  Baseline: configs/resources/audio/diff/frase_120_speaker_adriana_emotion_rispido.wav
+      -  
+        - type: paired_comparison
+          id: paralelo_12
+          name: Tarefa 2 - Comparação de Estilo
+          content: Entre os áudios A e B, qual estilo de locução mais se aproxima do da referência?
+          unforced: Igualmente Próximos
+          showWaveform: false
+          enableLooping: false
+          reference: configs/resources/audio/gt_ressintese/frase_139.wav
+          stimuli:
+                  LowAnchor: configs/resources/audio/vaeflow/frase_139_speaker_adriana_emotion_neutro.wav
+                  Baseline: configs/resources/audio/diff/frase_139_speaker_adriana_emotion_neutro.wav
+      -    
+        - type: paired_comparison
+          id: paralelo_13
+          name: Tarefa 2 - Comparação de Estilo
+          content: Entre os áudios A e B, qual estilo de locução mais se aproxima do da referência?
+          unforced: Igualmente Próximos
+          showWaveform: false
+          enableLooping: false
+          reference: configs/resources/audio/gt_ressintese/frase_144.wav
+          stimuli:
+                  LowAnchor: configs/resources/audio/vaeflow/frase_144_speaker_adriana_emotion_neutro.wav
+                  Baseline: configs/resources/audio/diff/frase_144_speaker_adriana_emotion_neutro.wav
+      -  
+        - type: paired_comparison
+          id: paralelo_14
+          name: Tarefa 2 - Comparação de Estilo
+          content: Entre os áudios A e B, qual estilo de locução mais se aproxima do da referência?
+          unforced: Igualmente Próximos
+          showWaveform: false
+          enableLooping: false
+          reference: configs/resources/audio/gt_ressintese/frase_140.wav
+          stimuli:
+                  LowAnchor: configs/resources/audio/vaeflow/frase_140_speaker_adriana_emotion_neutro.wav
+                  Baseline: configs/resources/audio/diff/frase_140_speaker_adriana_emotion_neutro.wav
+      -
+        - type: paired_comparison
+          id: paralelo_15
+          name: Tarefa 2 - Comparação de Estilo
+          content: Entre os áudios A e B, qual estilo de locução mais se aproxima do da referência?
+          unforced: Igualmente Próximos
+          showWaveform: false
+          enableLooping: false
+          reference: configs/resources/audio/gt_ressintese/frase_159.wav
+          stimuli:
+                  LowAnchor: configs/resources/audio/vaeflow/frase_159_speaker_adriana_emotion_neutro.wav
+                  Baseline: configs/resources/audio/diff/frase_159_speaker_adriana_emotion_neutro.wav
+      -
+        - type: paired_comparison
+          id: paralelo_16
+          name: Tarefa 2 - Comparação de Estilo
+          content: Entre os áudios A e B, qual estilo de locução mais se aproxima do da referência?
+          unforced: Igualmente Próximos
+          showWaveform: false
+          enableLooping: false
+          reference: configs/resources/audio/gt_ressintese/frase_195.wav
+          stimuli:
+                  LowAnchor: configs/resources/audio/vaeflow/frase_195_speaker_adriana_emotion_rispido.wav
+                  Baseline: configs/resources/audio/diff/frase_195_speaker_adriana_emotion_rispido.wav
+
       -  
         - type: paired_comparison
           id: nao_paralelo_1
           name: Tarefa 2 - Comparação de Estilo
-          content: Entre os áudios A e B, qual estilo mais se aproxima do estilo da referência?
+          content: Entre os áudios A e B, qual estilo de locução mais se aproxima do da referência?
           unforced: Igualmente Próximos
           showWaveform: false
           enableLooping: false
-          reference: configs/resources/audio/mono_ref.wav
+          reference: configs/resources/audio/gt_ressintese/frase_174.wav
           stimuli:
-                  LowAnchor: configs/resources/audio/mono_c1.wav
-                  Baseline: configs/resources/audio/mono_c2.wav
+                  LowAnchor: configs/resources/audio/vaeflow/audios_nonparallel/frase_0_speaker_adriana_emotion_acolhedor.wav
+                  Baseline: configs/resources/audio/diff/audios_nonparallel/frase_0_speaker_adriana_emotion_acolhedor.wav
       -  
         - type: paired_comparison
           id: nao_paralelo_2
           name: Tarefa 2 - Comparação de Estilo
-          content: Entre os áudios A e B, qual estilo mais se aproxima do estilo da referência?
+          content: Entre os áudios A e B, qual estilo de locução mais se aproxima do da referência?
           unforced: Igualmente Próximos
           showWaveform: false
           enableLooping: false
-          reference: configs/resources/audio/mono_ref.wav
+          reference: configs/resources/audio/gt_ressintese/frase_33.wav
           stimuli:
-                  LowAnchor: configs/resources/audio/mono_c1.wav
-                  Baseline: configs/resources/audio/mono_c2.wav
+                  LowAnchor: configs/resources/audio/vaeflow/audios_nonparallel/frase_1_speaker_adriana_emotion_acolhedor.wav
+                  Baseline: configs/resources/audio/diff/audios_nonparallel/frase_1_speaker_adriana_emotion_acolhedor.wav
       -    
         - type: paired_comparison
           id: nao_paralelo_3
           name: Tarefa 2 - Comparação de Estilo
-          content: Entre os áudios A e B, qual estilo mais se aproxima do estilo da referência?
+          content: Entre os áudios A e B, qual estilo de locução mais se aproxima do da referência?
           unforced: Igualmente Próximos
           showWaveform: false
           enableLooping: false
-          reference: configs/resources/audio/mono_ref.wav
+          reference: configs/resources/audio/gt_ressintese/frase_34.wav
           stimuli:
-                  LowAnchor: configs/resources/audio/mono_c1.wav
-                  Baseline: configs/resources/audio/mono_c2.wav
+                  LowAnchor: configs/resources/audio/vaeflow/audios_nonparallel/frase_2_speaker_adriana_emotion_acolhedor.wav
+                  Baseline: configs/resources/audio/diff/audios_nonparallel/frase_2_speaker_adriana_emotion_acolhedor.wav
       -  
         - type: paired_comparison
           id: nao_paralelo_4
           name: Tarefa 2 - Comparação de Estilo
-          content: Entre os áudios A e B, qual estilo mais se aproxima do estilo da referência?
+          content: Entre os áudios A e B, qual estilo de locução mais se aproxima do da referência?
           unforced: Igualmente Próximos
           showWaveform: false
           enableLooping: false
-          reference: configs/resources/audio/mono_ref.wav
+          reference: configs/resources/audio/gt_ressintese/frase_37.wav
           stimuli:
-                  LowAnchor: configs/resources/audio/mono_c1.wav
-                  Baseline: configs/resources/audio/mono_c2.wav
+                  LowAnchor: configs/resources/audio/vaeflow/audios_nonparallel/frase_3_speaker_adriana_emotion_acolhedor.wav
+                  Baseline: configs/resources/audio/diff/audios_nonparallel/frase_3_speaker_adriana_emotion_acolhedor.wav
       -
         - type: paired_comparison
           id: nao_paralelo_5
           name: Tarefa 2 - Comparação de Estilo
-          content: Entre os áudios A e B, qual estilo mais se aproxima do estilo da referência?
+          content: Entre os áudios A e B, qual estilo de locução mais se aproxima do da referência?
           unforced: Igualmente Próximos
           showWaveform: false
           enableLooping: false
-          reference: configs/resources/audio/mono_ref.wav
+          reference: configs/resources/audio/gt_ressintese/frase_21.wav
           stimuli:
-                  LowAnchor: configs/resources/audio/mono_c1.wav
-                  Baseline: configs/resources/audio/mono_c2.wav
+                  LowAnchor: configs/resources/audio/vaeflow/audios_nonparallel/frase_4_speaker_adriana_emotion_animado.wav
+                  Baseline: configs/resources/audio/diff/audios_nonparallel/frase_4_speaker_adriana_emotion_animado.wav
       -
         - type: paired_comparison
           id: nao_paralelo_6
           name: Tarefa 2 - Comparação de Estilo
-          content: Entre os áudios A e B, qual estilo mais se aproxima do estilo da referência?
+          content: Entre os áudios A e B, qual estilo de locução mais se aproxima do da referência?
           unforced: Igualmente Próximos
           showWaveform: false
           enableLooping: false
-          reference: configs/resources/audio/mono_ref.wav
+          reference: configs/resources/audio/gt_ressintese/frase_23.wav
           stimuli:
-                  LowAnchor: configs/resources/audio/mono_c1.wav
-                  Baseline: configs/resources/audio/mono_c2.wav
+                  LowAnchor: configs/resources/audio/vaeflow/audios_nonparallel/frase_5_speaker_adriana_emotion_animado.wav
+                  Baseline: configs/resources/audio/diff/audios_nonparallel/frase_5_speaker_adriana_emotion_animado.wav
       - 
         - type: paired_comparison
           id: nao_paralelo_7
           name: Tarefa 2 - Comparação de Estilo
-          content: Entre os áudios A e B, qual estilo mais se aproxima do estilo da referência?
+          content: Entre os áudios A e B, qual estilo de locução mais se aproxima do da referência?
           unforced: Igualmente Próximos
           showWaveform: false
           enableLooping: false
-          reference: configs/resources/audio/mono_ref.wav
+          reference: configs/resources/audio/gt_ressintese/frase_28.wav
           stimuli:
-                  LowAnchor: configs/resources/audio/mono_c1.wav
-                  Baseline: configs/resources/audio/mono_c2.wav
+                  LowAnchor: configs/resources/audio/vaeflow/audios_nonparallel/frase_6_speaker_adriana_emotion_animado.wav
+                  Baseline: configs/resources/audio/diff/audios_nonparallel/frase_6_speaker_adriana_emotion_animado.wav
       -    
         - type: paired_comparison
           id: nao_paralelo_8
           name: Tarefa 2 - Comparação de Estilo
-          content: Entre os áudios A e B, qual estilo mais se aproxima do estilo da referência?
+          content: Entre os áudios A e B, qual estilo de locução mais se aproxima do da referência?
           unforced: Igualmente Próximos
           showWaveform: false
           enableLooping: false
-          reference: configs/resources/audio/mono_ref.wav
+          reference: configs/resources/audio/gt_ressintese/frase_29.wav
           stimuli:
-                  LowAnchor: configs/resources/audio/mono_c1.wav
-                  Baseline: configs/resources/audio/mono_c2.wav
+                  LowAnchor: configs/resources/audio/vaeflow/audios_nonparallel/frase_7_speaker_adriana_emotion_animado.wav
+                  Baseline: configs/resources/audio/diff/audios_nonparallel/frase_7_speaker_adriana_emotion_animado.wav
       -    
         - type: paired_comparison
           id: nao_paralelo_9
           name: Tarefa 2 - Comparação de Estilo
-          content: Entre os áudios A e B, qual estilo mais se aproxima do estilo da referência?
+          content: Entre os áudios A e B, qual estilo de locução mais se aproxima do da referência?
           unforced: Igualmente Próximos
           showWaveform: false
           enableLooping: false
-          reference: configs/resources/audio/mono_ref.wav
+          reference: configs/resources/audio/gt_ressintese/frase_20.wav
           stimuli:
-                  LowAnchor: configs/resources/audio/mono_c1.wav
-                  Baseline: configs/resources/audio/mono_c2.wav
+                  LowAnchor: configs/resources/audio/vaeflow/audios_nonparallel/frase_8_speaker_adriana_emotion_rispido.wav
+                  Baseline: configs/resources/audio/diff/audios_nonparallel/frase_8_speaker_adriana_emotion_rispido.wav
       -
         - type: paired_comparison
           id: nao_paralelo_10
           name: Tarefa 2 - Comparação de Estilo
-          content: Entre os áudios A e B, qual estilo mais se aproxima do estilo da referência?
+          content: Entre os áudios A e B, qual estilo de locução mais se aproxima do da referência?
           unforced: Igualmente Próximos
           showWaveform: false
           enableLooping: false
-          reference: configs/resources/audio/mono_ref.wav
+          reference: configs/resources/audio/gt_ressintese/frase_26.wav
           stimuli:
-                  LowAnchor: configs/resources/audio/mono_c1.wav
-                  Baseline: configs/resources/audio/mono_c2.wav
+                  LowAnchor: configs/resources/audio/vaeflow/audios_nonparallel/frase_9_speaker_adriana_emotion_rispido.wav
+                  Baseline: configs/resources/audio/diff/audios_nonparallel/frase_9_speaker_adriana_emotion_rispido.wav
+
+      -  
+        - type: paired_comparison
+          id: nao_paralelo_11
+          name: Tarefa 2 - Comparação de Estilo
+          content: Entre os áudios A e B, qual estilo de locução mais se aproxima do da referência?
+          unforced: Igualmente Próximos
+          showWaveform: false
+          enableLooping: false
+          reference: configs/resources/audio/gt_ressintese/frase_30.wav
+          stimuli:
+                  LowAnchor: configs/resources/audio/vaeflow/audios_nonparallel/frase_10_speaker_adriana_emotion_rispido.wav
+                  Baseline: configs/resources/audio/diff/audios_nonparallel/frase_10_speaker_adriana_emotion_rispido.wav
+      -  
+        - type: paired_comparison
+          id: nao_paralelo_12
+          name: Tarefa 2 - Comparação de Estilo
+          content: Entre os áudios A e B, qual estilo de locução mais se aproxima do da referência?
+          unforced: Igualmente Próximos
+          showWaveform: false
+          enableLooping: false
+          reference: configs/resources/audio/gt_ressintese/frase_32.wav
+          stimuli:
+                  LowAnchor: configs/resources/audio/vaeflow/audios_nonparallel/frase_11_speaker_adriana_emotion_rispido.wav
+                  Baseline: configs/resources/audio/diff/audios_nonparallel/frase_11_speaker_adriana_emotion_rispido.wav
+      -    
+        - type: paired_comparison
+          id: nao_paralelo_13
+          name: Tarefa 2 - Comparação de Estilo
+          content: Entre os áudios A e B, qual estilo de locução mais se aproxima do da referência?
+          unforced: Igualmente Próximos
+          showWaveform: false
+          enableLooping: false
+          reference: configs/resources/audio/gt_ressintese/frase_22.wav
+          stimuli:
+                  LowAnchor: configs/resources/audio/vaeflow/audios_nonparallel/frase_12_speaker_adriana_emotion_neutro.wav
+                  Baseline: configs/resources/audio/diff/audios_nonparallel/frase_12_speaker_adriana_emotion_neutro.wav
+      -  
+        - type: paired_comparison
+          id: nao_paralelo_14
+          name: Tarefa 2 - Comparação de Estilo
+          content: Entre os áudios A e B, qual estilo de locução mais se aproxima do da referência?
+          unforced: Igualmente Próximos
+          showWaveform: false
+          enableLooping: false
+          reference: configs/resources/audio/gt_ressintese/frase_24.wav
+          stimuli:
+                  LowAnchor: configs/resources/audio/vaeflow/audios_nonparallel/frase_13_speaker_adriana_emotion_neutro.wav
+                  Baseline: configs/resources/audio/diff/audios_nonparallel/frase_13_speaker_adriana_emotion_neutro.wav
+      -
+        - type: paired_comparison
+          id: nao_paralelo_15
+          name: Tarefa 2 - Comparação de Estilo
+          content: Entre os áudios A e B, qual estilo de locução mais se aproxima do da referência?
+          unforced: Igualmente Próximos
+          showWaveform: false
+          enableLooping: false
+          reference: configs/resources/audio/gt_ressintese/frase_25.wav
+          stimuli:
+                  LowAnchor: configs/resources/audio/vaeflow/audios_nonparallel/frase_14_speaker_adriana_emotion_neutro.wav
+                  Baseline: configs/resources/audio/diff/audios_nonparallel/frase_14_speaker_adriana_emotion_neutro.wav
+      -
+        - type: paired_comparison
+          id: nao_paralelo_16
+          name: Tarefa 2 - Comparação de Estilo
+          content: Entre os áudios A e B, qual estilo de locução mais se aproxima do da referência?
+          unforced: Igualmente Próximos
+          showWaveform: false
+          enableLooping: false
+          reference: configs/resources/audio/gt_ressintese/frase_31.wav
+          stimuli:
+                  LowAnchor: configs/resources/audio/vaeflow/audios_nonparallel/frase_15_speaker_adriana_emotion_neutro.wav
+                  Baseline: configs/resources/audio/diff/audios_nonparallel/frase_15_speaker_adriana_emotion_neutro.wav
 
     - type: finish
       name: Finalização

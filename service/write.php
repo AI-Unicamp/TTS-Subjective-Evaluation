@@ -5,8 +5,7 @@
 This source code is protected by copyright law and international treaties. This source code is made available to You subject to the terms and conditions of the Software License for the webMUSHRA.js Software. Said terms and conditions have been made available to You prior to Your download of this source code. By downloading this source code You agree to be bound by the above mentionend terms and conditions, which can also be found here: https://www.audiolabs-erlangen.de/resources/webMUSHRA. Any unauthorised use of this source code may result in severe civil and criminal penalties, and will be prosecuted to the maximum extent possible under law. 
 
 **************************************************************************/
-
-
+define('ROOT_URL','');
 
 function sanitize($string = '', $is_filename = FALSE)
 {
@@ -37,6 +36,8 @@ if (!is_dir($filepathPrefix)) {
     mkdir($filepathPrefix);
 }
 $length = count($session->participant->name);
+
+
 // mushra
 $write_mushra = false;
 $mushraCsvData = array();
@@ -46,34 +47,84 @@ $input = array("session_test_id");
 for($i =0; $i < $length; $i++){
 	array_push($input, $session->participant->name[$i]);
 }
-array_push($input, "trial_id", "rating_stimulus", "rating_score", "rating_time", "rating_comment");
+array_push($input, "trial_id", "rating_stimulus", "rating_score", "rating_time");
 array_push($mushraCsvData, $input);
 
  
  
- foreach ($session->trials as $trial) {
-  if ($trial->type == "mushra") {
+ foreach ($session->trials as $trial) 
+ {
+  if ($trial->type == "mushra") 
+  {
 	$write_mushra = true;
 
-	  foreach ($trial->responses as $response) {
+	  foreach ($trial->responses as $response) 
+	  {
 	  	
-		
+		// First value
 		$results = array($session->testId);
-		for($i =0; $i < $length; $i++){
+
+		// Profile Values
+		for($i =0; $i < $length; $i++)
+		{
 			array_push($results, $session->participant->response[$i]);
 		}  
-		array_push($results, $trial->id, $response->stimulus, $response->score, $response->time, $response->comment); 
+
+		// Experiment Values
+		array_push($results, $trial->id, $response->stimulus, $response->score, $response->time); 
 	  
+		// Save to MuschaCsvData
 	  	array_push($mushraCsvData, $results);
 	  	
-	  
-	  } 
-	    /*array_push($mushraCsvData, array($session->testId, $session->participant->email, $session->participant->age, $session->participant->gender, $trial->id, $response->stimulus, $response->score, $response->time, $response->comment));
-		 * 
-		 */     
+		//$host = "";
+		//$user = "";
+		//$password = "";
+		//$dbname = "";
+		//$port = "";
+
+		try{
+		//Set DSN data source name
+		$dsn = "pgsql:host=" . $host . ";port=" . $port .";dbname=" . $dbname . ";user=" . $user . ";password=" . $password . ";";
+
+
+		//create a pdo instance
+		$pdo = new PDO($dsn, $user, $password);
+		$pdo->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE,PDO::FETCH_OBJ);
+		$pdo->setAttribute(PDO::ATTR_EMULATE_PREPARES,false);
+		$pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+
+		$testid = strval($session->testId);
+		$names = strval($session->participant->response[0]);
+		$age = strval($session->participant->response[1]);
+		$sex = strval($session->participant->response[2]);
+		$trialid = strval($trial->id);
+		$ratsti = strval($response->stimulus);
+		$ratsco = strval($response->score);
+		$rattime = strval($response->time);
+				
+		$sql = 'INSERT INTO mushra(session_test_id, Nome, Idade, Sexo, trial_id, rating_stimulus, rating_score, rating_time) VALUES(:testid, :names, :age, :sex, :trialid, :ratsti, :ratsco, :rattime)';
+		$stmt = $pdo->prepare($sql);
+		$stmt->bindValue(':testid', $testid);
+		$stmt->bindValue(':names', $names);
+		$stmt->bindValue(':age', $age);
+		$stmt->bindValue(':sex', $sex);
+		$stmt->bindValue(':trialid', $trialid);
+		$stmt->bindValue(':ratsti', $ratsti);
+		$stmt->bindValue(':ratsco', $ratsco);
+		$stmt->bindValue(':rattime', $rattime);
+		$stmt->execute();
+		print_r ('ok');
+
+		}
+		catch (PDOException $e) {
+		echo 'Connection failed: ' . $e->getMessage();
+		}
+	  }   
   }
 }
-		
+
+
+
 if ($write_mushra) {
 	$filename = $filepathPrefix."mushra".$filepathPostfix;
 	$isFile = is_file($filename);
@@ -88,7 +139,7 @@ if ($write_mushra) {
 	fclose($fp);
 }
 
-// paired comparison
+// PAIRED COMPARISON
 
 $write_pc = false;
 $pcCsvData = array();
@@ -106,9 +157,7 @@ array_push($pcCsvData, $input);
 foreach ($session->trials as $trial) {
   if ($trial->type == "paired_comparison") {
 	  foreach ($trial->responses as $response) {	  	
-	  	$write_pc = true;
-		  
-		 
+	  	$write_pc = true;		 
 		$results = array($session->testId);
 		for($i =0; $i < $length; $i++){
 			array_push($results, $session->participant->response[$i]);
@@ -117,9 +166,52 @@ foreach ($session->trials as $trial) {
 	  
 	  	array_push($pcCsvData, $results); 
 		  
-		  
-	    // array_push($pcCsvData, array($session->testId, $session->participant->email, $session->participant->age, $session->participant->gender, $trial->id, $response->reference, $response->nonReference, $response->answer, $response->time, $response->comment));    
-	  }
+		//$host = "";
+		//$user = "";
+		//$password = "";
+		//$dbname = "";
+		//$port = "";
+
+		try{
+		//Set DSN data source name
+		$dsn = "pgsql:host=" . $host . ";port=" . $port .";dbname=" . $dbname . ";user=" . $user . ";password=" . $password . ";";
+
+
+		//create a pdo instance
+		$pdo = new PDO($dsn, $user, $password);
+		$pdo->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE,PDO::FETCH_OBJ);
+		$pdo->setAttribute(PDO::ATTR_EMULATE_PREPARES,false);
+		$pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+
+		$testid = strval($session->testId);
+		$names = strval($session->participant->response[0]);
+		$age = strval($session->participant->response[1]);
+		$sex = strval($session->participant->response[2]);
+		$trialid = strval($trial->id);
+		$ratref = strval($response->reference);
+		$ratnon = strval($response->nonReference);
+		$ratans = strval($response->answer);
+		$rattime = strval($response->time);
+				
+		$sql = 'INSERT INTO pc(session_test_id, Nome, Idade, Sexo, trial_id, rating_reference, rating_nonreference, rating_answer, rating_time) VALUES(:testid, :names, :age, :sex, :trialid, :ratref, :ratnon, :ratans, :rattime)';
+		$stmt = $pdo->prepare($sql);
+		$stmt->bindValue(':testid', $testid);
+		$stmt->bindValue(':names', $names);
+		$stmt->bindValue(':age', $age);
+		$stmt->bindValue(':sex', $sex);
+		$stmt->bindValue(':trialid', $trialid);
+		$stmt->bindValue(':ratref', $ratref);
+		$stmt->bindValue(':ratnon', $ratnon);
+		$stmt->bindValue(':ratans', $ratans);
+		$stmt->bindValue(':rattime', $rattime);
+		$stmt->execute();
+		print_r ('ok');
+
+		}
+		catch (PDOException $e) {
+		echo 'Connection failed: ' . $e->getMessage();
+		}
+	}
   }
 }
 
@@ -136,6 +228,7 @@ if ($write_pc) {
 	}
 	fclose($fp);
 }
+
 
 
 // bs1116
